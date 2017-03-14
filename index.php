@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Meal Planner Supreme</title>
+	<title>Home - Meal Planner Supreme</title>
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="stylesheet" href="css\bootstrap.min.css" />
@@ -9,6 +9,7 @@
 	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
+	<?php include 'includes/header.php' ?>
 	<div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">

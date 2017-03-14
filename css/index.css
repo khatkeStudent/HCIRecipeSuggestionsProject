@@ -9,6 +9,11 @@ p {
 	padding:4px;
 }
 
+.header {
+	margin:5px 0px;
+	text-align:center
+}
+
 .maincolumn {
 	text-align:center;
 	border-left-style:solid;
