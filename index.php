@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">
-				<h1>Popular Recipes</h1>
+				<h1>Populars Recipes</h1>
 				<?php include 'includes/popularrecipes.php' ?>
 			</div>
 			<div class="maincolumn col-md-4">
