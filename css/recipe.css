@@ -1,0 +1,19 @@
+.recipe{
+    float: left;
+}
+.recipe-actions{
+    float: left;
+}
+.recipe-actions button{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+h1{
+    text-align: center;
+}
+.recipe img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
