@@ -4,7 +4,7 @@
 			<img src="images/Logo.png" />
 		</div>
 		<div class="col-md-1">
-			<input id="btnSignup" type="button">login/sign up</input>
+			<input id="btnSignup" type="button" value="login/sign up" \>
 		</div>
 	</div>
 </div>
