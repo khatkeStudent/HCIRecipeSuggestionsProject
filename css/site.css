@@ -1,9 +1,9 @@
-.ahrefHeader {
+.ahrefLoginHeader, .ahrefGreetingHeader {
 	position:absolute;
 	bottom:0;
 	right:0;
 }
 
-.ahrefHeader a {
+.ahrefLoginHeader a, .ahrefGreetingHeader a {
 	margin-left:2em;
 }
