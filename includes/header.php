@@ -1,9 +1,7 @@
 <div class="header container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-offset-1 col-md-10">
 			<img src="images/Logo.png" />
-		</div>
-		<div class="col-md-1">
 			<input id="btnSignup" type="button" value="login/sign up" \>
 		</div>
 	</div>
