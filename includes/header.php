@@ -1,6 +1,10 @@
 <div class="header container">
 	<div class="row">
-		<img id="imgLogo" src="images/Logo.png" />
-		<input id="btnSignup" type="button" value="login/sign up" \>
+		<div class="col-md-12">
+			<img src="images/Logo.png" />
+		</div>
+		<div class="col-md-1">
+			<input id="btnSignup" type="button" value="login/sign up" \>
+		</div>
 	</div>
 </div>
