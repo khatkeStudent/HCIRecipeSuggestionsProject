@@ -1,6 +1,6 @@
-<html>
+<html>i
     <head>
-          <title>Meal Planner</title>
+          <title>Recipe</title>
 	<link rel="stylesheet" type="text/css" href="css/site.css" />
 	<link rel="stylesheet" type="text/css" href="css/recipe.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
@@ -33,7 +33,7 @@
 		</div>
 	    </div>
 	    <div class="recipe-actions">
-                <button type="button" class="btn btn-succes">+ Add</button>
+                <button type="button" class="btn btn-success">+ Add</button>
 		<button type="button" class="btn btn-info">Share</button>
 		<button type="button" class="btn btn-warning">Add groceries</button>
 	    </div>

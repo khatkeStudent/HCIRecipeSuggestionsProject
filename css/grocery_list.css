@@ -1,0 +1,11 @@
+.well{
+    margin-bottom: 5px !important;
+    padding: 5px 19px !important;
+    margin-top: 5px;
+    background-color: #BBB !important;
+}
+.well-sm{
+    background-color: #f5f5f5 !important;
+    margin-right: 2px !important;
+    margin-left: 2px !important;
+}
