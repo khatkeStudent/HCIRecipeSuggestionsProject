@@ -7,7 +7,7 @@ echo "		<div class='col-md-12'>";
 echo "			<img src='images/Logo.png' />"
 echo "			<div class='ahrefLoginHeader'>";
 
-if ($_SESSION["firstname"] == null) {
+if ($_SESSION != null && $_SESSION["firstname"] != null) {
 	echo "			<a href='./login.php'>Login</a>";
 	echo "			<a>Sign up</a>";
 } else {
