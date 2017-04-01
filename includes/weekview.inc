@@ -1,4 +1,4 @@
-<div id="weekcontainer" class="container">
+<div id="weekcontainer">
 	<div class="day">
 		<div id="weekviewsundaytitle" class="daytitle">
 			<span>SUN</span>
