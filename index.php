@@ -1,20 +1,16 @@
 <html>
 <head>
 	<title>Home - Meal Planner Supreme</title>
-    <link rel="stylesheet" type="text/css" href="css/site.css" />
+	<?php include 'includes/head.inc' ?>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" href="css\bootstrap.min.css" />
-	
-	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </head>
 <body>
-	<?php include 'includes/header.php' ?>
+	<?php include 'includes/header.inc' ?>
 	<div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">
 				<h1>Populars Recipes</h1>
-				<?php include 'includes/popularrecipes.php' ?>
+				<?php include 'includes/popularrecipes.inc' ?>
 			</div>
 			<div class="maincolumn col-md-4">
 			<h1>Twitter Posts</h1>

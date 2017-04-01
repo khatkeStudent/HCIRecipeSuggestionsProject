@@ -1,0 +1,52 @@
+/* Week view calendar */
+#weekcontainer {
+	display:inline-block;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-width: 1px;
+	border-style: solid;	
+	border-color:black;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:black;
+}
+
+#weekviewsunday {
+	margin-left:0px;
+}
+
+#weekviewsundaytitle {
+	margin-left:0px;
+}
+
+#weekviewsaturday {
+	margin-left:0px;
+	border-right-style:none;
+}
+
+#weekviewsaturdaytitle {
+	margin-left:0px;
+	}
+
+	.day {
+		border-top-radius:5px;
+		width:5em;
+		height:10em;	
+		display:inline-block;
+		float:left;
+		border-right-style:solid;
+		border-right-width:1px;
+		border-right-color:black;
+	}
+
+.daytitle {
+	background-color:light blue;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:black;	
+	text-align:center;
+}
+
+.daycontent {
+	margin-left:1px;
+}
