@@ -4,7 +4,7 @@
 echo "<div class='header container'>";
 echo "	<div class='row'>";
 echo "		<div class='col-md-12'>";
-echo "			<img src='images/Logo.png' />"
+echo "			<img src='images/Logo.png' />";
 echo "			<div class='ahrefLoginHeader'>";
 /*
 if (!isset($_SESSION["firstname"])) {
