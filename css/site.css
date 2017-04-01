@@ -7,3 +7,8 @@
 .ahrefLoginHeader a, .ahrefGreetingHeader a {
 	margin-left:2em;
 }
+
+.header {
+	margin:5px 0px;
+	text-align:center
+}
