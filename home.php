@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Home - Meal Planner Supreme</title>
-	<?php include 'includes/head.inc' ?>
+	<?php include_once('header.php'); ?>
 </head>
 <body>
 	<?php include 'includes/header.inc' ?>
