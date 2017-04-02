@@ -4,7 +4,6 @@
 	<?php include_once('header.php'); ?>
 </head>
 <body>
-	<?php include 'includes/header.inc' ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-12 col-md-6">
