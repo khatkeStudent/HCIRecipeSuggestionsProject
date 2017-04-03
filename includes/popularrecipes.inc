@@ -2,39 +2,39 @@
 	<div class="divPopRecipe">
 		<img class="imgRecipe" src="images/test.png" />
 		<p>
-			Description of good stuff, that very few people care anything about. This is a clown fiesta.
+			Steak & Kidney Pie
 		</p>
 	</div>
 </div>
 <div class="row">
 	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/test.png" />
+		<img class="imgRecipe" src="images/pasties.jpg" />
 		<p>
-			Description of good stuff, that very few people care anything about. This is a clown fiesta.
+			Cornish Pasties
 		</p>
 	</div>
 </div>
 <div class="row">
 	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/test.png" />
+		<img class="imgRecipe" src="images/asparagus.jpg" />
 		<p>
-			Description of good stuff, that very few people care anything about. This is a clown fiesta.
+			Roasted Asparagus
 		</p>
 	</div>
 </div>
 <div class="row">
 	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/test.png" />
+		<img class="imgRecipe" src="images/seitan.jpg" />
 		<p>
-			Description of good stuff, that very few people care anything about. This is a clown fiesta.
+			Mushrooms and Seitan over pasta
 		</p>
 	</div>
 </div>
 <div class="row">
 	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/test.png" />
+		<img class="imgRecipe" src="images/sandwich.png" />
 		<p>
-			Description of good stuff, that very few people care anything about. This is a clown fiesta.
+			Summer Sandwich
 		</p>
 	</div>
 </div>
