@@ -13,8 +13,8 @@
 				<?php include 'includes/popularrecipes.inc' ?>
 			</div>
 			<div class="maincolumn col-md-4">
-			<h1><a href="https://twitter.com/hcimealplanner">Tweets by hcimealplanner</a></h1>
-			 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<h1>Tweets</h1>
+			<a class="twitter-timeline" href="https://twitter.com/hcimealplanner">By @hcimealplanner</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			<div class="maincolumn rightcolumn col-md-4">
 				<div class="row">
