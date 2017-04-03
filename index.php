@@ -9,12 +9,12 @@
 	<div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">
-				<h1>Populars Recipes</h1>
+				<h1>Popular Recipes</h1>
 				<?php include 'includes/popularrecipes.inc' ?>
 			</div>
 			<div class="maincolumn col-md-4">
-			<h1>Twitter Posts</h1>
-			<a class="twitter-timeline" href="https://twitter.com/hcimealplanner">Tweets by hcimealplanner</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<h1><a class="twitter-timeline" href="https://twitter.com/hcimealplanner">Tweets by hcimealplanner</a></h1>
+			 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 			</div>
 			<div class="maincolumn rightcolumn col-md-4">
 				<div class="row">
