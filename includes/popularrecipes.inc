@@ -1,14 +1,6 @@
 <div class="row">
 	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/test.png" />
-		<p>
-			Steak & Kidney Pie
-		</p>
-	</div>
-</div>
-<div class="row">
-	<div class="divPopRecipe">
-		<img class="imgRecipe" src="images/pasties.jpg" />
+		<img class="imgRecipe" src="images/pasty.jpg" />
 		<p>
 			Cornish Pasties
 		</p>
