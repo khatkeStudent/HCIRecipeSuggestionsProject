@@ -1,52 +1,90 @@
 /* Week view calendar */
-#weekcontainer {
-	display:inline-block;
-	border-top-left-radius:5px;
-	border-top-right-radius:5px;
-	border-width: 1px;
-	border-style: solid;	
-	border-color:black;
-	border-bottom-width:1px;
-	border-bottom-style:solid;
-	border-bottom-color:black;
+#divWeekview {
+	display:flex;
 }
 
-#weekviewsunday {
-	margin-left:0px;
+.weekviewdayname {
+	margin: auto 0px;
+	padding: 0px;
 }
 
-#weekviewsundaytitle {
-	margin-left:0px;
-}
-
-#weekviewsaturday {
-	margin-left:0px;
-	border-right-style:none;
-}
-
-#weekviewsaturdaytitle {
-	margin-left:0px;
-	}
-
-	.day {
-		border-top-radius:5px;
-		width:5em;
-		height:10em;	
-		display:inline-block;
-		float:left;
-		border-right-style:solid;
-		border-right-width:1px;
-		border-right-color:black;
-	}
-
-.daytitle {
-	background-color:light blue;
-	border-bottom-style:solid;
-	border-bottom-width:1px;
-	border-bottom-color:black;	
+.weekviewday {
 	text-align:center;
+	margin-top:0px;
 }
 
-.daycontent {
-	margin-left:1px;
+.well{
+    padding: 0px auto !important;
+    margin-top: 0px;
+	margin-bottom: 0px;
+    background-color: var(--main-accent-color) !important;
+}
+
+.well-sm{
+    background-color: #f5f5f5 !important;
+}
+
+/* Favorite Recipes */
+.divFavoriteRecipes {
+	border:solid 1px black;
+}
+
+.divFavoriteRecipes h2, .divFriendsActivities h2, .divSuggestions h2  {
+	margin: 0px;
+	padding: 5px 0px;
+	text-align:center;
+	border-bottom:solid 1px black;
+	background-color: var(--main-bg-color);
+	font-family:'Open Sans', sans-serif;
+}
+
+.divFavoriteRecipes div {
+	border-bottom:solid 1px black;
+	padding:2px 0px 2px 5px;
+}
+
+/* Friends Activities */
+.divFriendsActivities {
+	border:solid 1px black;
+}
+
+.divFriendActivityPost {
+	margin-left:2em;
+}
+
+.divFriendsActivities h3 {
+	margin:0px;
+	padding-left:2px;
+}
+
+.divFriendActivityAuthor {
+	padding-left:1em;
+	font-size:.8em;
+}
+
+/* Suggested Recipes */
+.divSuggestions {
+	border:solid 1px black;
+}
+
+/* Recipe Summaries */
+
+.divRecipeSummary {
+	display:flex;
+}
+
+.divRecipeSumImg {
+	display:inline-block;
+}
+
+
+.divRecipeSumName {
+	margin:0em 1em;
+	font-weight:bold;
+	font-family:'Open Sans', sans-serif;
+	font-size:1.2em;
+}
+
+.divRecipeSumDesc {
+	margin:0em 1.5em;
 }

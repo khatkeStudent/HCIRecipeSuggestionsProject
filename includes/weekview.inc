@@ -1,99 +1,44 @@
-<div id="weekcontainer">
-	<div class="day">
-		<div id="weekviewsundaytitle" class="daytitle">
-			<span>SUN</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+<div id="divWeekview">
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Sunday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div class="day">
-		<div class="daytitle">
-			<span>MON</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Monday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div class="day">
-		<div class="daytitle">
-			<span>TUES</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Tuesday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div class="day">
-		<div class="daytitle">
-			<span>WED</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Wednesday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div class="day">
-		<div class="daytitle">
-			<span>THUR</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Thursday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div class="day">
-		<div class="daytitle">
-			<span>FRI</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Friday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
-	
-	<div id="weekviewsaturday" class="day">
-		<div class="daytitle">
-			<span>SAT</span>
-		</div>
-		<div class="daycontent">
-			<div class="divmeal">
-				<span>lunch</span>
-			</div>
-			<div class="divmeal">
-				<span>dinner</span>
-			</div>
-		</div>
+	<div class="weekviewday well">
+		<div class="weekviewdayname">Saturday</div>
+		<div class="row well well-sm">breakfast</div>
+		<div class="row well well-sm">lunch</div>
+		<div class="row well well-sm">dinner</div>
 	</div>
 </div>
