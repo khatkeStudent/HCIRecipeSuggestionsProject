@@ -71,12 +71,16 @@
 
 .divRecipeSummary {
 	display:flex;
+	margin-bottom:3px;
 }
 
 .divRecipeSumImg {
 	display:inline-block;
 }
 
+.divRecipeSumImg img {
+	height:100px;
+}
 
 .divRecipeSumName {
 	margin:0em 1em;

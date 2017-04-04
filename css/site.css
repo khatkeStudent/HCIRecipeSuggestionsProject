@@ -31,3 +31,18 @@
 	padding: 0px 20px;
 	border-right:solid 1px black;
 }
+
+/* User Profile button */
+.tooltip {
+	background-color:orange;
+    text-decoration:none;
+    position:relative;
+}
+.tooltip span {
+    display:none;
+}
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}

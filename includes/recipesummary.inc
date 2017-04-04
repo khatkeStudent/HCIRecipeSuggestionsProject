@@ -1,6 +1,6 @@
 <div class="divRecipeSummary">
 	<div class="divRecipeSumImg">
-		<img src='images/test.png' />
+		<img src='images/clamchowder.jpg' />
 	</div>
 	<div>
 		<div class="divRecipeSumName">
