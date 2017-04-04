@@ -11,7 +11,7 @@
     <body>
         <?php include 'includes/header.php' ?>
 	<div class="container">
-            <h1>Title</h1>
+            <h1>Crockpot Chicken</h1>
 	    <div class="recipe">
 	        <img src="images/test.png">
 		<div class="recipe-body">
