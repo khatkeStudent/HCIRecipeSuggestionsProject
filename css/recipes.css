@@ -3,5 +3,6 @@
 }
 
 .searchBar {
+	display: in-line block;
 	text-align: center;
 }
