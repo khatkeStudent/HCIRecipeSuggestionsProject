@@ -15,5 +15,10 @@
 <body onload="loaded()" onresize="screenresized()">
 	<?php include 'includes/header.inc' ?>
 	<?php include 'includes/headermenu.inc' ?>
+	<div class="row bodyrow">
+		<div class="col-sm-12 col-md-6 homesection">
+			<?php include 'includes/suggestions.inc ?>
+		</div>
+	</div>
 </body>
 </html>
