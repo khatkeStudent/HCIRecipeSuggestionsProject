@@ -1,16 +1,12 @@
 <html>
     <head>
-          <title>Meal Planner</title>
-        <link rel="stylesheet" type="text/css" href="css/site.css" />
+		<title>Meal Planner</title>
+		<?php include 'includes/head.inc' ?>
         <link rel="stylesheet" type="text/css" href="css/meal_planner.css" />
-        <link rel="stylesheet" type="text/css" href="css/index.css"/>
-	<link rel="stylesheet" href="css\bootstrap.min.css" />
-
-        <script src="js/jquery-3.1.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
     </head>
     <body>
-        <?php include 'includes/header.php' ?>
+		<?php include 'includes/header.inc' ?>
+		<?php include 'includes/headermenu.inc' ?>
         <div class="container">
 	    <div class="row text-center first-row">
                 <div class="col-md-1 well col-md-offset-2">Sunday
