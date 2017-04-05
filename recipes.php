@@ -17,7 +17,7 @@
 	<?php include 'includes/headermenu.inc' ?>
 	<div class="searchBar">
 		<p>Search Recipes</p>
-		<form method="post" action="recipes.php" id="searchForm">
+		<form method="post" action="recipe.php" id="searchForm">
 			<input type="text" name="searchName">
 			<input type="submit" name="search" value="Search">
 		</form>
