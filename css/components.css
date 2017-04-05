@@ -29,7 +29,7 @@
 	border:solid 1px black;
 }
 
-.divFavoriteRecipes h2, .divFriendsActivities h2, .divSuggestions h2  {
+.divFavoriteRecipes h2, .divFriendsActivities h2, .divSuggestions h2, .divPlanMore h2  {
 	margin: 0px;
 	padding: 5px 0px;
 	text-align:center;

@@ -1,79 +1,36 @@
+<?php 
+	@session_start();
+	if (!isset($_SESSION["firstname"])) {
+		header("Location: login.php");
+	}
+?>
+
 <html>
     <head>
 		<title>Meal Planner</title>
 		<?php include 'includes/head.inc' ?>
-        <link rel="stylesheet" type="text/css" href="css/meal_planner.css" />
+                <?php include 'includes/components.inc'?>
+		<link rel="stylesheet" type="text/css" href="css/meal_planner.css" />
     </head>
     <body>
 		<?php include 'includes/header.inc' ?>
 		<?php include 'includes/headermenu.inc' ?>
-        <div class="container">
-	    <div class="row text-center first-row">
-                <div class="col-md-1 well col-md-offset-2">Sunday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-		    <div class="row well well-sm">dinner</div>
-		</div>
-	        <div class="col-md-1 well">Monday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-		    <div class="row well well-sm">dinner</div>
-
-		</div>
-	        <div class="col-md-1 well">Tuesday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-                    <div class="row well well-sm">dinner</div>
-
-		</div>
-	        <div class="col-md-1 well">Wednesday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-		    <div class="row well well-sm">dinner</div>
-
-		</div>
-	        <div class="col-md-1 well">Thursday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-		    <div class="row well well-sm">dinner</div>
-
-		</div>
-	        <div class="col-md-1 well">Friday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-                    <div class="row well well-sm">dinner</div>
-
-		</div>
-	        <div class="col-md-1 well">Saturday
-		    <div class="row well well-sm">breakfast</div>
-		    <div class="row well well-sm">lunch</div>
-		    <div class="row well well-sm">dinner</div>
-
-		</div>
+        <div class="row text-center">
+            <div class="planner-body">
+	        <?php include 'includes/weekview.inc' ?>
 	    </div>
-	    <div class="row text-center second-row">
-	        <div class="col-md-3 well col-md-offset-1">You Need More ... 
-		    <div class="row">Protein</div>
-		    <div class="row well well-sm">
-		        <img src="images/test.png">
-			blah blah blah blah
-		    </div>
-		    <div class="row well well-sm">
-		        <img src="images/test.png">
-			Some text about a recipe
-		    </div>
+	</div>
+	<div class="row text-center planner-bottom">
+	    <div class="col-md-4 needs">
+	        <h3>You Need More ...</h3> 
+	        <div class="row"><h4>Protein</h4></div>
+		    <?php include 'includes/suggestions.inc'?>
 		</div>
-		<div class="col-md-3 well">Your Friends Tried
-                    <div class="row well well-sm">
-		        <img src="images/test.png">
-			recipe recipe recipe
-		    </div>
-		    <div class="row well well-sm">
-		        <img src="images/test.png">
-			stuuuuufff friends stuff
-		    </div>
+		<div class="col-md-4">
+		    <?php include 'includes/friendsactivities.inc' ?>
 		</div>
-		<div class="col-md-3 well">Plan
+		<div class="col-md-4 divPlanMore">
+		    <h2>Plan</h2>
                     <div class="row well well-sm">NEXT WEEK</div>
 		    <div class="row well well-sm">NEXT MONTH</div>
 		</div>

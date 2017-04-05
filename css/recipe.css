@@ -1,9 +1,9 @@
 .recipe {
-	display:flex;
+    display:flex;
 }
 
 .recipe-body {
-	display:inline-block;
+    display:inline-block;
 }
 
 .recipe-img {
@@ -13,7 +13,7 @@
 }
 
 .recipe-actions {
-	display:inline-block;
+    display:inline-block;
 }
 
 .recipe-actions button{
