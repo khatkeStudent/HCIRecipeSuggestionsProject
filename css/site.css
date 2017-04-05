@@ -3,6 +3,10 @@
   --main-accent-color:lightblue;
 }
 
+.bodyrow {
+	margin:3px 10px;
+}
+
 .ahrefLoginHeader, .ahrefGreetingHeader {
 	position:absolute;
 	bottom:0;
@@ -38,9 +42,11 @@
     text-decoration:none;
     position:relative;
 }
+
 .tooltip span {
     display:none;
 }
+
 .tooltip:hover span {
     display:block;
     position:fixed;

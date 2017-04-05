@@ -1,15 +1,22 @@
-<div class="divRecipeSummary">
-	<div class="divRecipeSumImg">
-		<img src='images/clamchowder.jpg' />
-	</div>
-	<div>
-		<div class="divRecipeSumName">
-			<a href="recipe.php?id=1">
-			Clam Chowder
-			</a>
-		</div>
-		<div class="divRecipeSumDesc">
-			A delicious, traditional, cream based chowder, this recipe calls for the standard chowder ingredients: onion, celery, potatoes, diced carrots, clams, and cream. A little red wine vinegar is added before serving for extra flavor.
-		</div>
-	</div>
-</div>
+<?php
+function printimage($img) {
+	echo "<div class='divRecipeSummary'>";
+	echo "	<div class='divRecipeSumImg'>";
+	echo "	  <img src='" . $img . "' />";
+	echo "	</div>";
+}
+
+function printtitle($id, $title) {
+	echo "<div>";
+	echo "  <div class='divRecipeSumName'>";
+	echo "    <a href='recipe.php?id=" . $id . "'>";
+	echo $title;
+	echo "</a></div>";
+}
+
+function printsummary($summary) {
+	echo "<div class='divRecipeSumDesc'>";
+	echo $summary;
+	echo "</div></div></div>";
+}	
+?>
