@@ -6,6 +6,7 @@
 </head>
 <body>
 	<?php include 'includes/header.inc' ?>
+	<?php if (isset($_SESSION["firstname"])){include 'includes/headermenu.inc';}?>
 	<div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">

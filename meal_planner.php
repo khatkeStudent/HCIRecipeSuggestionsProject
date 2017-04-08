@@ -1,4 +1,4 @@
-<?php 
+<?php
 	@session_start();
 	if (!isset($_SESSION["firstname"])) {
 		header("Location: login.php");
@@ -6,35 +6,46 @@
 ?>
 
 <html>
-    <head>
-		<title>Meal Planner</title>
-		<?php include 'includes/head.inc' ?>
-                <?php include 'includes/components.inc'?>
-		<link rel="stylesheet" type="text/css" href="css/meal_planner.css" />
-    </head>
-    <body>
-		<?php include 'includes/header.inc' ?>
-		<?php include 'includes/headermenu.inc' ?>
-        <div class="row text-center">
-            <div class="planner-body">
-	        <?php include 'includes/weekview.inc' ?>
-	    </div>
+<head>
+	<title>Home - Meal Planner Supreme</title>
+	<?php include 'includes/head.inc' ?>
+	<?php include 'includes/components.inc' ?>
+	<link rel="stylesheet" href="css/meal_planner.css" />
+	<script src="js/meal_planner.js"></script>
+
+<script>
+/*
+function profilemove() {
+	var tooltipSpan = document.getElementById('tooltipspan');
+
+	window.onmousemove = function (e) {
+		var x = e.clientX,
+			y = e.clientY;
+		tooltipSpan.style.top = (y + 20) + 'px';
+		tooltipSpan.style.left = (x + 20) + 'px';
+	};
+}
+*/
+</script>
+</head>
+<body onload="loaded()" onresize="screenresized()">
+	<?php include 'includes/header.inc' ?>
+	<?php include 'includes/headermenu.inc' ?>
+	<div class="row bodyrow">
+		<div class="col-sm-12 col-md-6 plannersection">
+			<?php include 'includes/weekview.inc' ?>
+		</div>
+		<div class="col-sm-12 col-md-6 plannersection">
+			<?php include 'includes/favoriterecipes.inc' ?>
+		</div>
 	</div>
-	<div class="row text-center planner-bottom">
-	    <div class="col-md-4 needs">
-	        <h3>You Need More ...</h3> 
-	        <div class="row"><h4>Protein</h4></div>
-		    <?php include 'includes/suggestions.inc'?>
+	<div class="row bodyrow">
+		<div class="col-sm-12 col-md-6 planneresection">
+			<?php include 'includes/friendsactivities.inc' ?>
 		</div>
-		<div class="col-md-4">
-		    <?php include 'includes/friendsactivities.inc' ?>
+		<div class="col-sm-12 col-md-6 plannersection">
+			<?php include 'includes/suggestions.inc' ?>
 		</div>
-		<div class="col-md-4 divPlanMore">
-		    <h2>Plan</h2>
-                    <div class="row well well-sm">NEXT WEEK</div>
-		    <div class="row well well-sm">NEXT MONTH</div>
-		</div>
-	    </div>
 	</div>
-    </body>
+</body>
 </html>

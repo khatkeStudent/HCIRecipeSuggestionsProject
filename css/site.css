@@ -36,6 +36,10 @@
 	border-right:solid 1px black;
 }
 
+.menucontainer a:last-child{
+   border-right: none;
+}
+
 /* User Profile button */
 .tooltip {
 	background-color:orange;

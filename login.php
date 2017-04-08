@@ -8,9 +8,9 @@
 	<?php include 'includes/head.inc' ?>
 	<?php include 'includes/components.inc' ?>
 	<link rel="stylesheet" href="css/login.css" />
-	<script src="js/home.js"></script>
+	<script src="js/meal_planner.js"></script>
 </head>
-<body>	
+<body>
 	<?php include 'includes/header.inc' ?>
 	<?php include 'includes/headermenu.inc' ?>
     <form action="handlers/login_handler.php" method="post">

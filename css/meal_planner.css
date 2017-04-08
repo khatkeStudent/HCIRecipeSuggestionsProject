@@ -1,16 +1,7 @@
-.planner-body{
-    margin: 0 auto;
-    max-width: 675px;
-}
-
-.planner-bottom{
-    margin: 3px 0px;
-}
-
-.divPlanMore {
-    border: solid 1px black;
+.plannersection {
+	margin:3px 0px;
 }
 
 #ahrefMealPlanner {
-    background-color:lightblue;
+	background-color:lightblue;
 }

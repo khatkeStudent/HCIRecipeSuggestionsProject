@@ -11,8 +11,6 @@
 			<li><a href="recipes.php" class="recipes">Recipes</a></li>
 			<li><a href="meal_planner.php" class="meal_planner"<Meal Planner</a></li>
 			<li><a href="calendar.php" class="calendar">Calendar</a></li>
-			<li><a href="network.php" class="network">Network</a></li>
 		</ul>
 	</div>
 </head>
-

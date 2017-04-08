@@ -1,4 +1,4 @@
-<?php 
+<?php
 	@session_start();
 	if (!isset($_SESSION["firstname"])) {
 		header("Location: login.php");
@@ -7,7 +7,7 @@
 
 <html>
 <head>
-	<title>Home - Meal Planner Supreme</title>
+	<title>Recipes Search</title>
 	<?php include 'includes/head.inc' ?>
 	<?php include 'includes/components.inc' ?>
 	<link rel="stylesheet" type="text/css" href="css/recipes.css" />
@@ -24,7 +24,7 @@
 	</div>
 	<div class="row bodyrow">
 		<div class="col-sm-12 col-md-6 homesection">
-<?php 
+<?php
 include_once 'includes/recipesummary.inc';
 $count = 0;
 $usedrecipes = array();
@@ -34,9 +34,9 @@ while ($count < 3) {
 	if (in_array($recipeid,$usedrecipes)) {
 		continue;
 	}
-	console.log($recipeid);
+	echo "<script>console.log(".$recipeid.");</script>";
 	array_push($usedrecipes,$recipeid);
-	
+
 	if ($recipeid == 0) {
 		printimage("images/clamchowder.jpg");
 		printtitle($recipeid, 'Clam Chowder');
