@@ -1,0 +1,38 @@
+.banner {
+	height: 80px;
+	width: 90%;
+	margin: auto;
+}
+
+.logo {
+	width: 50%;
+	padding-right: 50%;
+}
+
+logo > img{
+	width: 100px;
+	height: 100px;
+	padding: 0%;
+	float: center;
+	padding-bottom: 0px;
+}
+
+#navigation {
+	margin: 10px;
+}
+
+#navigation > ul {
+	padding: 0px;
+	width: 80%;
+	margin 0px auto;
+}
+
+#navigation > ul > li {
+	display: inline;
+	line-height: 25px;
+}
+
+#navigation a {
+	font-weight: bold;
+	padding: 10px 20px
+}

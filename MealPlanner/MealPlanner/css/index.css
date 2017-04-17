@@ -1,0 +1,47 @@
+h1 {
+	border-bottom-style:solid;
+	border-color:#666699;
+	width:100%;
+}
+
+p {
+	text-align:left;
+	padding:4px;
+}
+
+.maincolumn {
+	text-align:center;
+	border-left-style:solid;
+	border-top-style:solid;
+	border-color:#666699;
+	height:inherit;	
+}
+
+.subcolumn {
+	border-top-style:solid;
+	border-color:#666699;
+}
+
+.rightcolumn {
+	border-right-style:solid;
+	border-color:#666699;
+}
+
+.divPopRecipe {
+	margin:2px 0px;
+	width:100%;
+}
+
+.imgRecipe {
+	padding:2px;
+	float:left;
+	width:100px;
+	height:100px;
+}
+
+#btnSignUp {
+	width:96%;
+	margin-top:5px;
+	font-size:2em;
+}
+

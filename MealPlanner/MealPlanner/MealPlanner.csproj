@@ -66,8 +66,49 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\calendar.css" />
+    <Content Include="css\components.css" />
+    <Content Include="css\fullcalendar.min.css" />
+    <Content Include="css\fullcalendar.print.min.css" />
+    <Content Include="css\grocery_list.css" />
+    <Content Include="css\header_style.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\meal_planner.css" />
+    <Content Include="css\network.css" />
+    <Content Include="css\recipe.css" />
+    <Content Include="css\recipes.css" />
+    <Content Include="css\site.css" />
+    <Content Include="images\asparagus.jpg" />
+    <Content Include="images\buffalowings.jpg" />
+    <Content Include="images\clamchowder.jpg" />
+    <Content Include="images\Logo.png" />
+    <Content Include="images\pasty.jpg" />
+    <Content Include="images\pizza.jpg" />
+    <Content Include="images\reubensandwich.jpg" />
+    <Content Include="images\sandwich.png" />
+    <Content Include="images\seitan.jpg" />
+    <Content Include="images\test.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\components.js" />
+    <Content Include="js\fullcalendar.min.js" />
+    <Content Include="js\fullcalendar.print.min.css" />
+    <Content Include="js\jquery-3.1.1.min.js" />
+    <Content Include="js\meal_planner.js" />
+    <Content Include="js\moment.min.js" />
+    <Content Include="js\npm.js" />
     <Content Include="packages.config" />
     <Content Include="HCIMaster.Master" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,9 +121,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data\DBConnection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="includes\PopularRecipes.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Recipe.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HCIMaster.Master.cs">
       <DependentUpon>HCIMaster.Master</DependentUpon>
@@ -94,7 +146,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
