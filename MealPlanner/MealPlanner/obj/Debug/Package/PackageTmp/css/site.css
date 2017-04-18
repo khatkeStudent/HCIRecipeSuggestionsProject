@@ -1,0 +1,58 @@
+:root {
+  --main-bg-color:dodgerblue;
+  --main-accent-color:lightblue;
+}
+
+.bodyrow {
+	margin:3px 10px;
+}
+
+.ahrefLoginHeader, .ahrefGreetingHeader {
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+
+.ahrefLoginHeader a, .ahrefGreetingHeader a {
+	margin-left:2em;
+}
+
+.header {
+	margin:5px 0px;
+	text-align:center
+}
+
+.menucontainer {
+	text-align:center;
+	font-size:1.2em;
+	border-top:solid 1px black;
+	border-bottom:solid 1px black;
+	margin-bottom:5px;
+}
+
+.menucontainer a {
+	margin: 10px 0px;
+	padding: 0px 20px;
+	border-right:solid 1px black;
+}
+
+.menucontainer a:last-child{
+   border-right: none;
+}
+
+/* User Profile button */
+.tooltip {
+	background-color:orange;
+    text-decoration:none;
+    position:relative;
+}
+
+.tooltip span {
+    display:none;
+}
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}

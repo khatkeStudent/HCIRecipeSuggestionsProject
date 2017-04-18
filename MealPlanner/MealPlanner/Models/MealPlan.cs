@@ -30,10 +30,10 @@ namespace MealPlanner.Models
                         DBConnection.OpenConnection(conn);
                         cmd.CommandText = (mealplan == null
                                 ?// Create new mealplan
-                                "INSERT INTO [dbo].[MealPlans] (UserID, RecipeID, PlanDate) " +
+                                "INSERT INTO [dbo].[MealPlan] (UserID, RecipeID, PlanDate) " +
                                 $" Values ({UserID}, {RecipeID},'{PlanDate}')"
                                 : // Update existing mealplan
-                                $"UPDATE [dbo].[MealPlans] SET UserID = {UserID}, " +
+                                $"UPDATE [dbo].[MealPlan] SET UserID = {UserID}, " +
                                 $"RecipeID = {RecipeID}, PlanDate = '{PlanDate}' " + 
                                 $"WHERE ID = {ID}");
 
@@ -69,7 +69,7 @@ namespace MealPlanner.Models
 
                         // Delete mealplan if they exist;
                         DBConnection.OpenConnection(conn);
-                        cmd.CommandText = $"DELETE FROM [dbo].[MealPlans] WHERE ID = {ID}";
+                        cmd.CommandText = $"DELETE FROM [dbo].[MealPlan] WHERE ID = {ID}";
                         cmd.ExecuteNonQuery();
                     }
                 } catch (Exception ex) {
@@ -89,7 +89,7 @@ namespace MealPlanner.Models
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = $"SELECT * FROM [dbo].[MealPlans] WHERE ID = {id}";
+                        cmd.CommandText = $"SELECT * FROM [dbo].[MealPlan] WHERE ID = {id}";
 
                         DBConnection.OpenConnection(conn);
 
@@ -111,6 +111,33 @@ namespace MealPlanner.Models
                 }
                 finally
                 {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
+        public static MealPlan Get(int userid, int recipeid, string date) {
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+                        cmd.CommandText = $"SELECT * FROM [dbo].[MealPlan] WHERE UserID = {userid} AND " +
+                            $"RecipeID = {recipeid} AND PlanDate = '{date}'";
+
+                        DBConnection.OpenConnection(conn);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                return Parse(reader);
+                            }
+                        }
+
+                        return null;
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                    return null;
+                } finally {
                     DBConnection.CloseConnection(conn);
                 }
             }

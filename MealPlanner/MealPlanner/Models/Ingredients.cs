@@ -12,7 +12,7 @@ namespace MealPlanner.Models
         public int RecipeID { get; set; }
         public string Name { get; set; }
         public string MeasureAmount { get; set; }
-        public string MeasureType { get; set; }
+        //public string MeasureType { get; set; }
         
         public void Save()
         {
@@ -30,11 +30,11 @@ namespace MealPlanner.Models
                         DBConnection.OpenConnection(conn);
                         cmd.CommandText = (user == null
                                 ?// Create new user
-                                "INSERT INTO [dbo].[Ingredients] (RecipeID, Name, MeasureAmount, MeasureType) " +
-                                $" Values ('{RecipeID}','{Name}','{MeasureAmount}','{MeasureType}')"
+                                "INSERT INTO [dbo].[Ingredients] (RecipeID, Name, MeasureAmount) " + //, MeasureType) " +
+                                $" Values ('{RecipeID}','{Name}','{MeasureAmount}')"//,'{MeasureType}')"
                                 : // Update existing user
-                                $"UPDATE [dbo].[Ingredients] SET MeasureAmount = '{MeasureAmount}', " +
-                                $"MeasureType = '{MeasureType}' " +
+                                $"UPDATE [dbo].[Ingredients] SET MeasureAmount = '{MeasureAmount}' " +
+                                //$", MeasureType = '{MeasureType}' " +
                                 $"WHERE RecipeID = {RecipeID} AND Name = '{Name}");
 
                         cmd.ExecuteNonQuery();
@@ -120,6 +120,33 @@ namespace MealPlanner.Models
             }
         }
 
+        public static LinkedList<Ingredient> Get(int recipeid) {
+            LinkedList<Ingredient> retval = new LinkedList<Ingredient>();
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+                        cmd.CommandText = $"SELECT * FROM [dbo].[Ingredients] WHERE RecipeID = {recipeid}";
+
+                        DBConnection.OpenConnection(conn);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                retval.AddLast(Parse(reader));
+                            }
+                        }
+
+                        return retval;
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                    return null;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
         public static Ingredient Parse(SqlDataReader reader)
         {
             Ingredient ingredient = new Ingredient();
@@ -128,7 +155,7 @@ namespace MealPlanner.Models
                 ingredient.RecipeID = Convert.ToInt32(reader["RecipeID"]);
                 ingredient.Name = reader["Name"].ToString();
                 ingredient.MeasureAmount = reader["MeasureAmount"].ToString();
-                ingredient.MeasureType = reader["MeasureType"].ToString();
+                //ingredient.MeasureType = reader["MeasureType"].ToString();
                 return ingredient;
             }
             catch (Exception ex)

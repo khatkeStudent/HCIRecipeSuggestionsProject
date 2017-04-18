@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=aa186yl63358lgn.cffzcbilaraa.us-west-2.rds.amazonaws.com,1433;Database=MealPlanner;User Id=admin;Password=HciRocks;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Kenny\\Documents\\repos\\HCIRecipeSuggestionsProject\\MealPlanner\\MealPlanner\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>

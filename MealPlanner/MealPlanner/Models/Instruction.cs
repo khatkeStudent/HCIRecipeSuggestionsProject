@@ -91,7 +91,7 @@ namespace MealPlanner.Models
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = conn;
-                        cmd.CommandText = $"SELECT * FROM [dbo].[Instructions] WHERE ID = {id} AND Sequence = {seq}";
+                        cmd.CommandText = $"SELECT * FROM [dbo].[Instructions] WHERE RecipeID = {id} AND Sequence = {seq}";
 
                         DBConnection.OpenConnection(conn);
 
@@ -118,6 +118,33 @@ namespace MealPlanner.Models
             }
         }
         
+        public static LinkedList<Instruction> Get(int recipeid) {
+            LinkedList<Instruction> retval = new LinkedList<Instruction>();
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+                        cmd.CommandText = $"SELECT * FROM [dbo].[Instructions] WHERE RecipeID = {recipeid} ORDER BY Sequence";
+
+                        DBConnection.OpenConnection(conn);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                retval.AddLast(Parse(reader));
+                            }
+                        }
+
+                        return retval;
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                    return null;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
         public static Instruction Parse(SqlDataReader reader)
         {
             Instruction instruction = new Instruction();
