@@ -94,6 +94,42 @@ namespace MealPlanner.Models
             }
         }
 
+        public static User Get(string email)
+        {
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection()))
+            {
+                try
+                {
+                    using (SqlCommand cmd = new SqlCommand())
+                    {
+                        cmd.Connection = conn;
+                        cmd.CommandText = $"SELECT * FROM Users WHERE Email = '{email}'";
+
+                        DBConnection.OpenConnection(conn);
+
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                return Parse(reader);
+                            }
+                        }
+
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    String e = ex.Message;
+                    return null;
+                }
+                finally
+                {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
         public static User Parse(SqlDataReader reader) {
             User user = new User();
             try {
