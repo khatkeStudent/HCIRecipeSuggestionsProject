@@ -22,6 +22,33 @@ namespace MealPlanner {
         protected global::System.Web.UI.WebControls.Literal txtTitle;
         
         /// <summary>
+        /// divError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divError;
+        
+        /// <summary>
+        /// txtError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label txtError;
+        
+        /// <summary>
+        /// divRecipe control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divRecipe;
+        
+        /// <summary>
         /// txtRecipeName control.
         /// </summary>
         /// <remarks>
@@ -58,22 +85,31 @@ namespace MealPlanner {
         protected global::System.Web.UI.WebControls.Button btnAddToPlan;
         
         /// <summary>
-        /// Button1 control.
+        /// btnShare control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnShare;
         
         /// <summary>
-        /// Button2 control.
+        /// btnAddGroceries control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnAddGroceries;
+        
+        /// <summary>
+        /// divInstructionContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInstructionContainer;
         
         /// <summary>
         /// divInstructions control.

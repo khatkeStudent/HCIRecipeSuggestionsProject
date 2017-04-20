@@ -19,16 +19,19 @@
     <div class='header container'>
     <div class='row'>
 		<div class='col-md-12'>
-			<a href='index.php'><img src='images/Logo.png' /></a>
-			<div class='ahrefLoginHeader'>
-	            <a href='./login.php'>Login</a>
-	            <a>Sign up</a>
+			<a href='index.aspx'><img src='images/Logo.png' /></a>
+			<div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
+	            <a href='./login.aspx'>Login</a>
+	            <a href="register.aspx">Sign up</a>
+            </div>
+            <div  runat="server" id="divLoggedIn">
+                <asp:Label runat="server" ID="txtUserName" />
             </div>
 		</div>
         <div class="menucontainer">
-	        <a id="ahrefRecipes" href="recipes.php">Recipes</a>
-	        <a id="ahrefMealPlanner" href="meal_planner.php">Meal Planner</a>
-	        <a id="ahrefCalendar" href="calendar.php">Calendar</a>
+	        <a id="ahrefRecipes" href="recipes.aspx">Recipes</a>
+	        <a id="ahrefMealPlanner" href="mealplanner.aspx">Meal Planner</a>
+	        <a id="ahrefCalendar" href="calendar.aspx">Calendar</a>
         </div>
 	</div>
     </div>

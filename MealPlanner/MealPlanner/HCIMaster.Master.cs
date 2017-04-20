@@ -11,7 +11,13 @@ namespace MealPlanner
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["user"] == null) {
+                divLoggedIn.Visible = false;
+            } else {
+                divNotLoggedIn.Visible = false;
+                Models.User user = (Models.User)Session["user"];
+                txtUserName.Text = $"{user.FirstName} {user.LastName}";
+            }
         }
     }
 }

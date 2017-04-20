@@ -12,5 +12,23 @@ namespace MealPlanner
         protected void Page_Load(object sender, EventArgs e) {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e) {
+            String email =  txtUsername.Text;
+            String password = txtPassword.Text;
+
+            var user = Models.User.Get(email, password);
+
+            if (user == null) {
+                txtError.Text = "Invalid email address or password.";
+                txtError.Visible = true;
+            } else {
+                if (Session["user"] != null) {
+                    Session.Remove("user");
+                }
+                Session.Add("user", user);
+                Response.Redirect("index.aspx");
+            }
+        }
     }
 }

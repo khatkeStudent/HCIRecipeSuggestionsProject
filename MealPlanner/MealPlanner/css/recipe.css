@@ -1,3 +1,8 @@
+#divError {
+    visibility:collapse;
+    display:none;
+}
+
 .recipe img {
     width: 10em;
     height: 10em;

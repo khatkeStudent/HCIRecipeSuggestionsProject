@@ -7,17 +7,24 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
-    <form method="get" action="login.aspx">
+    <asp:Label ID="txtError" runat="server" CssClass="alert alert-danger text-center"></asp:Label>
+    <form runat="server" method="get" action="login.aspx">
 	    <fieldset>
 		    <legend>Login</legend>
-		    <h3>Username</h3>
-		    <input runat="server" id="txtUsername" name="txtUsername" type="Text" />
-		    <h3>Password</h3>
-		    <input runat="server" id="txtPassword" name="txtPassword" type="Password" />
-		    <input class="btnLogin" name="btnSubmit" type="submit" value="Login" />
-	    </fieldset>
+            <div class="form-group">
+		        <label for="txtUsername">Email Address</label>
+                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" />
+            </div>
+            <div class="form-group">
+		        <label for="txtPassword">Password</label>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" />
+            </div>
+            <div class="form-group">
+		        <asp:Button runat="server" id="btnLogin" CssClass="btn btn-primary" Text="Login" OnClick="btnLogin_Click" />
+            </div>
+        </fieldset>
     </form>
     <div>
-        New user? <a href="createaccount.aspx">create account</a>
+        New user? <a href="register.aspx">Sign up</a>
     </div>
 </asp:Content>

@@ -8,6 +8,7 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
+    <asp:Label runat="server" ID="txtMessages" />
     <div class="container">
 		<div class="row">
 			<div class="maincolumn col-md-4">
@@ -41,7 +42,9 @@
 					</p>
 				</div>
 				<div class="subcolumn row">
-					<button id="btnSignUp">Sign Up Now!</button>
+                    <form runat="server">
+					    <asp:Button runat="server" ID="btnSignup" OnClick="btnSignup_Click" Text="Sign Up Now!" />
+                    </form>
 				</div>
 			</div>
 		</div>

@@ -12,6 +12,18 @@ namespace MealPlanner
     {
         protected void Page_Load(object sender, EventArgs e) {
             divPopularRecipes.InnerHtml = PopularRecipes.GetRecipes();
+
+            if (Session["message"] != null) {
+                txtMessages.Text = Session["message"].ToString();
+                txtMessages.Visible = true;
+                Session.Remove("message");
+            } else {
+                txtMessages.Visible = false;
+            }
+        }
+
+        protected void btnSignup_Click(object sender, EventArgs e) {
+            Response.Redirect("register.aspx");
         }
     }
 }

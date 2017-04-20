@@ -83,6 +83,7 @@
     <Content Include="css\network.css" />
     <Content Include="css\recipe.css" />
     <Content Include="css\recipes.css" />
+    <Content Include="css\register.css" />
     <Content Include="css\site.css" />
     <Content Include="css\TestSuite.css" />
     <Content Include="DatabaseDownload.aspx" />
@@ -125,6 +126,8 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="recipe.aspx" />
+    <Content Include="recipes.aspx" />
+    <Content Include="register.aspx" />
     <Content Include="TestSuite.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -199,6 +202,20 @@
     </Compile>
     <Compile Include="recipe.aspx.designer.cs">
       <DependentUpon>recipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="recipes.aspx.cs">
+      <DependentUpon>recipes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="recipes.aspx.designer.cs">
+      <DependentUpon>recipes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
     </Compile>
     <Compile Include="TestSuite.aspx.cs">
       <DependentUpon>TestSuite.aspx</DependentUpon>
