@@ -38,3 +38,11 @@ D:\Users\ithatkkd\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPl
 D:\Users\ithatkkd\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\obj\Debug\MealPlanner.csprojResolveAssemblyReference.cache
 D:\Users\ithatkkd\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\obj\Debug\MealPlanner.dll
 D:\Users\ithatkkd\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\obj\Debug\MealPlanner.pdb
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\Newtonsoft.Json.dll
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Net.Http.Formatting.dll
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Web.Http.dll
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Web.Http.WebHost.dll
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\Newtonsoft.Json.xml
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Net.Http.Formatting.xml
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Web.Http.xml
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlanner\bin\System.Web.Http.WebHost.xml
