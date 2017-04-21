@@ -42,103 +42,103 @@ namespace MealPlanner
                         Instruction instruction = new Instruction();
                         instruction.RecipeID = recipe.ID;
                         instruction.Sequence = 1;
-                        instruction.Direction = meal.strInstructions;
+                        instruction.Direction = meal.strInstructions.Replace("'", "''");
                         instruction.Save();
 
                         // Save ingredients
                         if (!string.IsNullOrEmpty(meal.strIngredient1)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient1;
-                            ingredient.MeasureAmount = meal.strMeasure1;
+                            ingredient.Name = meal.strIngredient1.Replace("'","''");
+                            ingredient.MeasureAmount = meal.strMeasure1.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient2)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient2;
-                            ingredient.MeasureAmount = meal.strMeasure2;
+                            ingredient.Name = meal.strIngredient2.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure2.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient3)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient3;
-                            ingredient.MeasureAmount = meal.strMeasure3;
+                            ingredient.Name = meal.strIngredient3.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure3.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient4)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient4;
-                            ingredient.MeasureAmount = meal.strMeasure4;
+                            ingredient.Name = meal.strIngredient4.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure4.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient5)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient5;
-                            ingredient.MeasureAmount = meal.strMeasure5;
+                            ingredient.Name = meal.strIngredient5.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure5.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient6)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient6;
-                            ingredient.MeasureAmount = meal.strMeasure6;
+                            ingredient.Name = meal.strIngredient6.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure6.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient7)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient7;
-                            ingredient.MeasureAmount = meal.strMeasure7;
+                            ingredient.Name = meal.strIngredient7.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure7.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient8)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient8;
-                            ingredient.MeasureAmount = meal.strMeasure8;
+                            ingredient.Name = meal.strIngredient8.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure8.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient9)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient9;
-                            ingredient.MeasureAmount = meal.strMeasure9;
+                            ingredient.Name = meal.strIngredient9.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure9.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient10)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient10;
-                            ingredient.MeasureAmount = meal.strMeasure10;
+                            ingredient.Name = meal.strIngredient10.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure10.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient11)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient11;
-                            ingredient.MeasureAmount = meal.strMeasure11;
+                            ingredient.Name = meal.strIngredient11.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure11.Replace("'", "''");
                             ingredient.Save();
                         }
 
                         if (!string.IsNullOrEmpty(meal.strIngredient12)) {
                             Ingredient ingredient = new Ingredient();
                             ingredient.RecipeID = recipe.ID;
-                            ingredient.Name = meal.strIngredient12;
-                            ingredient.MeasureAmount = meal.strMeasure12;
+                            ingredient.Name = meal.strIngredient12.Replace("'", "''");
+                            ingredient.MeasureAmount = meal.strMeasure12.Replace("'", "''");
                             ingredient.Save();
                         }
 

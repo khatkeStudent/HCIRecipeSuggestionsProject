@@ -10,6 +10,15 @@
 namespace MealPlanner {
     
     
-    public partial class calendar {
+    public partial class calendarpage {
+        
+        /// <summary>
+        /// calendar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
     }
 }

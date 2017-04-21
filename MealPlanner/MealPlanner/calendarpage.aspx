@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="calendar.aspx.cs" Inherits="MealPlanner.calendar" MasterPageFile="~/HCIMaster.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="calendarpage.aspx.cs" Inherits="MealPlanner.calendarpage" MasterPageFile="~/HCIMaster.Master" %>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpTitle">Calendar</asp:Content>
 
@@ -10,9 +10,12 @@
 	<script src='js/moment.min.js'></script>
 	<script src='js/fullcalendar.min.js'></script>
 	<script>
+	    function pageloaded() {
+
+	    }
+
 	    $(document).ready(function() {
-		
-		    $('#calendar').fullCalendar({
+	        $('#cpBody_calendar').fullCalendar({
 			    header: {
 				    left: 'prev,next today',
 				    center: 'title',
@@ -22,7 +25,7 @@
 			    navLinks: true, // can click day/week names to navigate views
 			    editable: true,
 			    eventLimit: true, // allow "more" link when too many events
-			    events: [/*
+			    events: [ /*
 				    {
 					    title: 'All Day Event',
 					    start: '2017-04-01'
@@ -86,5 +89,5 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
-	<div id='calendar' />
+	<div runat="server" id="calendar" />
 </asp:Content>

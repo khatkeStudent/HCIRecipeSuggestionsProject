@@ -11,6 +11,7 @@ namespace MealPlanner
     public partial class recipe : System.Web.UI.Page
     {
         private Recipe mRecipe;
+        private User mUser;
 
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
@@ -22,11 +23,38 @@ namespace MealPlanner
                     if (!loadRecipeFromUrl()) {
                         return;
                     }
+                } else {
+                    mRecipe = (Recipe)Session["recipe"];
                 }
+            }
+
+            if (Session["alert"] == null) {
+                lblAlert.Visible = false;
+            } else {
+                lblAlert.Visible = true;
+                lblAlert.Text = Session["alert"].ToString();
+                Session.Remove("alert");
+            }
+
+            if (Session["error"] == null) {
+                lblError.Visible = false;
+            } else {
+                lblError.Visible = true;
+                lblError.Text = Session["error"].ToString();
+                Session.Remove("error");
+            }
+
+            if (Session["user"] == null) {
+                btnAddGroceries.Visible = false;
+                btnAddToPlan.Visible = false;
+                divDatePicker.Visible = false;
+            } else {
+                mUser = (User)Session["user"];
             }
 
             txtTitle.Text = mRecipe.Name;
             imgRecipe.Src = mRecipe.Image;
+            datepicker.Value = DateTime.Now.ToString("MM/dd/yyyy");
             divIngredients.InnerHtml = formatIngredients();
             divInstructions.InnerHtml = formatInstructions();
         }
@@ -51,7 +79,11 @@ namespace MealPlanner
                 string[] steps = instruction.Direction.Replace("\r\n", "|").Split('|');
 
                 foreach (string step in steps) {
-                    retval += $"<li>{step}.";
+                    if (step.EndsWith(".")) {
+                        retval += $"<li>{step}";
+                    } else {
+                        retval += $"<li>{step}.";
+                    }
                 }
             }
 
@@ -86,7 +118,7 @@ namespace MealPlanner
         }
 
         private void displayError() {
-            txtError.Text = "Unable to find the recipe you were looking for. We suggest searching the <a href='recipes.aspx'>recipes page</a> for the recipe you were looking for.";
+            lblError.Text = "Unable to find the recipe you were looking for. We suggest searching the <a href='recipes.aspx'>recipes page</a> for the recipe you were looking for.";
             txtTitle.Text = "Error";
             divError.Visible = true;
             divInstructionContainer.Visible = false;
@@ -95,7 +127,26 @@ namespace MealPlanner
         #endregion
 
         protected void btnAddToPlan_Click(object sender, EventArgs e) {
+            DateTime date = DateTime.Now;
+            try {
+                date = DateTime.Parse(datepicker.Value);
+            } catch (Exception ex) {
+                if (Session["error"] != null) {
+                    Session.Remove("error");
+                }
 
+                Session.Add("error", "Invalid Date.");
+                return;
+            }
+
+            MealPlan meal = new MealPlan();
+            meal.UserID = mUser.ID;
+            meal.PlanDate = date.ToString("MM/dd/yyyy");
+            meal.RecipeID = mRecipe.ID;
+            meal.Save();
+
+            lblAlert.Visible = true;
+            lblAlert.Text = $"Recipe added successfully for {date.ToString("MM/dd/yyyy")}";
         }
 
         protected void btnShare_Click(object sender, EventArgs e) {
@@ -103,7 +154,15 @@ namespace MealPlanner
         }
 
         protected void btnAddGroceries_Click(object sender, EventArgs e) {
+            foreach (Ingredient ingredient in Ingredient.Get(mRecipe.ID)) {
+                GroceryItem item = new GroceryItem();
+                item.UserID = mUser.ID;
+                item.IngredientName = ingredient.Name;
+                item.Save();
+            }
 
+            lblAlert.Visible = true;
+            lblAlert.Text = $"Groceries have been added to your list.";
         }
     }
 }
