@@ -1,0 +1,23 @@
+﻿#divStats {
+    font-weight:bold;
+    font-size:large;
+    padding-bottom:1em;
+}
+
+.testname {
+    display:inline-block;
+    width:150px;
+    margin-right:5em;
+}
+
+.testresult {
+    display:inline-block;
+}
+
+.successful {
+    color:green;
+}
+
+.failure {
+    color:red;
+}

@@ -1,0 +1,94 @@
+/* Week view calendar */
+#divWeekview {
+	display:flex;
+}
+
+.weekviewdayname {
+	margin: auto 0px;
+	padding: 0px;
+}
+
+.weekviewday {
+	text-align:center;
+	margin-top:0px;
+}
+
+.well{
+    padding: 0px auto !important;
+    margin-top: 0px;
+	margin-bottom: 0px;
+    background-color: var(--main-accent-color) !important;
+}
+
+.well-sm{
+    background-color: #f5f5f5 !important;
+}
+
+/* Favorite Recipes */
+.divFavoriteRecipes {
+	border:solid 1px black;
+}
+
+.divFavoriteRecipes h2, .divFriendsActivities h2, .divSuggestions h2, .divPlanMore h2  {
+	margin: 0px;
+	padding: 5px 0px;
+	text-align:center;
+	border-bottom:solid 1px black;
+	background-color: var(--main-bg-color);
+	font-family:'Open Sans', sans-serif;
+}
+
+.divFavoriteRecipes div {
+	border-bottom:solid 1px black;
+	padding:2px 0px 2px 5px;
+}
+
+/* Friends Activities */
+.divFriendsActivities {
+	border:solid 1px black;
+}
+
+.divFriendActivityPost {
+	margin-left:2em;
+}
+
+.divFriendsActivities h3 {
+	margin:0px;
+	padding-left:2px;
+}
+
+.divFriendActivityAuthor {
+	padding-left:1em;
+	font-size:.8em;
+}
+
+/* Suggested Recipes */
+.divSuggestions {
+	border:solid 1px black;
+}
+
+/* Recipe Summaries */
+
+.divRecipeSummary {
+	display:flex;
+	margin-bottom:3px;
+}
+
+.divRecipeSumImg {
+	display:inline-block;
+}
+
+.divRecipeSumImg img {
+	height:100px;
+}
+
+.divRecipeSumName {
+	margin:0em 1em;
+	font-weight:bold;
+	font-family:'Open Sans', sans-serif;
+	font-size:1.2em;
+}
+
+.divRecipeSumDesc {
+	margin:0em 1.5em;
+}

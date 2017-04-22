@@ -5,6 +5,11 @@
 <asp:Content runat="server" ContentPlaceHolderID="cpHead">
 	<link rel="stylesheet" href="css/meal_planner.css" />
 	<script src="js/meal_planner.js"></script>
+    <script>
+        function pageloaded() {
+
+        }
+    </script>
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">

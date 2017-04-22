@@ -1,0 +1,30 @@
+#ahrefRecipes {
+	background-color:lightblue;
+}
+
+.imgRecipeListItem {
+    width:10em;
+    height:10em;
+}
+
+.listItemCell {
+    padding-bottom:.5em;
+}
+
+.rowItemContainer {
+    margin-top:5em;
+}
+
+.searchBar {
+	display:inline-block;
+	text-align: center;
+}
+
+.row bodyrow {
+	display:inline-block;
+	text-align: center;
+}
+
+#DataPager {
+    text-align:center;
+}

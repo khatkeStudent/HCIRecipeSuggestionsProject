@@ -10,12 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="css/site.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet" />
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <asp:ContentPlaceHolder ID="cpHead" runat="server" />
 </head>
-<body>
+<body onload="pageloaded()">
     <div class='header container'>
     <div class='row'>
 		<div class='col-md-12'>
@@ -31,7 +35,7 @@
         <div class="menucontainer">
 	        <a id="ahrefRecipes" href="recipes.aspx">Recipes</a>
 	        <a id="ahrefMealPlanner" href="mealplanner.aspx">Meal Planner</a>
-	        <a id="ahrefCalendar" href="calendar.aspx">Calendar</a>
+	        <a id="ahrefCalendar" href="calendarpage.aspx">Calendar</a>
         </div>
 	</div>
     </div>

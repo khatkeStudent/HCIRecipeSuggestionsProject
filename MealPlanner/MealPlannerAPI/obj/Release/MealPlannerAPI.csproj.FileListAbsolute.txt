@@ -74,3 +74,4 @@ C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlann
 C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlannerAPI\bin\System.Web.Http.Owin.xml
 C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlannerAPI\obj\Release\MealPlannerAPI.dll
 C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlannerAPI\obj\Release\MealPlannerAPI.pdb
+C:\Users\Kenny\Documents\repos\HCIRecipeSuggestionsProject\MealPlanner\MealPlannerAPI\obj\Release\MealPlannerAPI.csprojResolveAssemblyReference.cache

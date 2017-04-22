@@ -10,7 +10,9 @@ namespace MealPlanner
     public partial class login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e) {
-
+            if (Session["prevurl"] == null) {
+                Session.Add("prevurl", "index.aspx");
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e) {
@@ -27,7 +29,11 @@ namespace MealPlanner
                     Session.Remove("user");
                 }
                 Session.Add("user", user);
-                Response.Redirect("index.aspx");
+
+                string nexturl = Session["prevurl"].ToString();
+                Session.Remove("prevurl");
+
+                Response.Redirect(nexturl);
             }
         }
     }

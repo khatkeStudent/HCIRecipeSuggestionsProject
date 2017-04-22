@@ -30,6 +30,7 @@
             </div>
             <div  runat="server" id="divLoggedIn">
                 <asp:Label runat="server" ID="txtUserName" />
+                <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
             </div>
 		</div>
         <div class="menucontainer">

@@ -25,7 +25,35 @@
 			    navLinks: true, // can click day/week names to navigate views
 			    editable: true,
 			    eventLimit: true, // allow "more" link when too many events
-			    eventSources: ["http://localhost:59760/api/MealPlan"]
+			    eventClick: function(calEvent, jsEvent, view) {
+
+			        alert('Event: ' + calEvent.recipeid);
+			        window.location.href = "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlanner/Recipe.aspx?id=" + calEvent.recipeid;
+			    },
+			    eventDrop: function(event, delta, revertFunc) {
+			        var datastring = "\"" + event.id + "|" + event.start.format() + "\"";
+
+			        alert(event.id + " was dropped on " + event.start.format());
+
+			        if (!confirm("Are you sure about this change? ".concat(datastring))) {
+			            revertFunc();
+			        } else {
+			            $.ajax({
+			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
+			                type: 'PUT',
+			                contentType: 'text/json',
+			                data: datastring,
+			                success: function (result) {
+			                    alert(event.id + " was updated.");
+			                },
+			                error: function (result) {
+			                    alert(event.id + " errored");
+			                }
+			            });
+			        }
+			    },
+	            eventSources: ["http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/".concat(document.getElementById('cpBody_hiddenUserID').value)]
+                //events: [{id:1, title:"test", start:"04/10/2017"}]
 		    });
 		
 	    });
@@ -34,5 +62,6 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
+    <input type="hidden" runat="server" id="hiddenUserID" />
 	<div runat="server" id="calendar" />
 </asp:Content>

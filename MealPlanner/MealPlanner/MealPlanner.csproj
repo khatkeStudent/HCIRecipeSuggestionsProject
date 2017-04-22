@@ -130,6 +130,7 @@
     <Content Include="js\moment.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="mealplanner.aspx" />
     <Content Include="packages.config" />
     <Content Include="HCIMaster.Master" />
@@ -196,7 +197,13 @@
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="MealPlanController.cs" />
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="mealplanner.aspx.cs">
       <DependentUpon>mealplanner.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

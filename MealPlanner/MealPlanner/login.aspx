@@ -4,6 +4,11 @@
 
 <asp:Content runat="server" ContentPlaceHolderID="cpHead">
 	<link rel="stylesheet" href="css/login.css" />
+    <script>
+        function pageloaded() {
+
+        }
+    </script>
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
