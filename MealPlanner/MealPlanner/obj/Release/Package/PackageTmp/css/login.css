@@ -11,16 +11,13 @@ fieldset legend {
 	font-size:2em;
 }
 
-input {
-    display:block;
-    width:100%;
-    margin:5px 0px;
+.divRegister {
+    margin-left:10em;
+    padding-top:.5em
 }
 
-.btnLogin {
-	width:auto;
+.btnlogin {
 	font-size:1em;
-	float:right;
-	border-radius:3px;
-	padding:0.5em 1em;
+    float:left;
+    width:8em;
 }

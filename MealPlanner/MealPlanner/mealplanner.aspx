@@ -35,21 +35,21 @@
                         event.recipeid + "|" +
                         event.start.format() + "\"";
 
-			        if (confirm("Add Meal? ".concat(datastring))) {
-			            $.ajax({
-			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
-			                type: 'PUT',
-			                contentType: 'text/json',
-			                data: datastring,
-			                success: function (data, status, xhr) {
-			                    alert("Received id: " + JSON.stringify(data).replace("{", "").replace("}", "").replace("\"", "").replace("\"", ""));
-			                    event.id = JSON.stringify(data).replace("{", "").replace("}", "").replace("\"", "").replace("\"", "");
-			                },
-			                error: function (result) {
-			                    alert("Error saving the meal: " + result);
-			                }
-			            });
-			        }
+			        //if (confirm("Add Meal? ".concat(datastring))) {
+			        $.ajax({
+			            url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
+			            type: 'PUT',
+			            contentType: 'text/json',
+			            data: datastring,
+			            success: function (data, status, xhr) {
+			                //alert("Received id: " + JSON.stringify(data).replace("{", "").replace("}", "").replace("\"", "").replace("\"", ""));
+			                event.id = JSON.stringify(data).replace("{", "").replace("}", "").replace("\"", "").replace("\"", "");
+			            },
+			            error: function (result) {
+			                alert("Error saving the meal: " + result);
+			            }
+			        });
+			        //}
 			    },
 			    droppable: true,
 			    eventLimit: true, // allow "more" link when too many events
@@ -58,7 +58,7 @@
 			    },
 			    eventDrop: function(event, delta, revertFunc) {
 			        var datastring = "\"" + event.id + "|" + event.start.format() + "\"";
-			        if (!confirm("Are you sure about this change? ".concat(datastring))) {
+			        if (!confirm("Move " + event.title + "?")) {
 			            revertFunc();
 			        } else {
 			            $.ajax({
@@ -67,7 +67,7 @@
 			                contentType: 'text/json',
 			                data: datastring,
 			                success: function (result) {
-			                    alert("Saved changes to " + event.title);
+			                    //alert("Saved changes to " + event.title);
 			                },
 			                error: function (result) {
 			                    alert("Error saving changes to " + event.title);
@@ -87,16 +87,16 @@
 			        if (jsEvent.pageX >= x1 && jsEvent.pageX <= x2 &&
                         jsEvent.pageY >= y1 && jsEvent.pageY <= y2) {
 			            
-			            if (confirm("Remove Meal? ".concat(event.id))) {
+			            if (confirm("Remove Meal? ")) {
 			                $.ajax({
 			                    url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/" + event.id,
 			                    type: 'DELETE',
 			                    success: function (result) {
-			                        alert("deleted: " + event.id);
+			                        //alert("deleted: " + event.id);
 			                        $('#cpBody_calendar').fullCalendar('removeEvents', event._id);
 			                    },
 			                    error: function (result) {
-			                        alert("Error saving changes to " + event.id);
+			                        alert("Error saving changes to " + event.title);
 			                    }
 			                });
 			            }
@@ -115,7 +115,6 @@
 	            $("#selectable").selectable();
 	        });
 
-
 	        $(".deletegrocery").click(function (b) {
 	            if ($(this).attr("value") == "X") {
 	                var actionstring = "\"" + $(this).attr('removeaction') + "|delete\"";
@@ -126,7 +125,7 @@
 	                    contentType: 'text/json',
 	                    data: actionstring,
 	                    success: function (result) {
-	                        alert("Saved changes to " + actionstring);
+	                        //alert("Saved changes to " + actionstring);
 	                    },
 	                    error: function (result) {
 	                        alert("Error saving changes to " + actionstring);
@@ -142,7 +141,7 @@
 	                    contentType: 'text/json',
 	                    data: actionstring,
 	                    success: function (result) {
-	                        alert("Saved changes to " + actionstring);
+	                        //alert("Saved changes to " + actionstring);
 	                    },
 	                    error: function (result) {
 	                        alert("Error saving changes to " + actionstring);

@@ -8,9 +8,9 @@ namespace MealPlanner.includes
 {
     public static class PopularRecipes
     {
-        public static string GetRecipes() {
+        public static string GetRecipes(int count) {
             string retval = string.Empty;
-            LinkedList<Recipe> recipes = Recipe.GetRandom();
+            LinkedList<Recipe> recipes = Recipe.GetRandom(count);
 
             foreach (Recipe recipe in recipes) {
                 retval += $"<div class='row'><a href='recipe.aspx?id={recipe.ID}'><div class='divPopRecipe'>" +

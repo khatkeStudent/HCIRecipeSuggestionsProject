@@ -121,12 +121,12 @@ namespace MealPlanner.Models
             }
         }
 
-        public static LinkedList<Recipe> GetRandom() {
+        public static LinkedList<Recipe> GetRandom(int count) {
             LinkedList<Recipe> recipes = new LinkedList<Recipe>();
             LinkedList<int> usednumbers = new LinkedList<int>();
 
             Random random = new Random();
-            while (recipes.Count < 10) {
+            while (recipes.Count < count) {
                 int number = random.Next(0, 500);
 
                 Recipe recipe = Get(number);

@@ -24,12 +24,12 @@
 		        <label for="txtPassword">Password</label>
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="form-control" />
             </div>
-            <div class="form-group">
-		        <asp:Button runat="server" id="btnLogin" CssClass="btn btn-primary" Text="Login" OnClick="btnLogin_Click" />
+            <div class="form-group divLoginButton">
+		        <asp:Button runat="server"  ID="btnLogin" CssClass="btn btn-primary btnlogin" Text="Login" OnClick="btnLogin_Click" />
+            </div>
+            <div class="form-group divRegister">
+                New user? <a href="register.aspx">Sign up</a>
             </div>
         </fieldset>
     </form>
-    <div>
-        New user? <a href="register.aspx">Sign up</a>
-    </div>
 </asp:Content>

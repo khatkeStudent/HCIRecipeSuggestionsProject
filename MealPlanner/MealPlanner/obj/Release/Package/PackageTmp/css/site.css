@@ -2,12 +2,17 @@
 
 .bodyrow { margin:3px 10px; }
 
-.ahrefLoginHeader, .ahrefGreetingHeader { position:absolute; bottom:0; right:0; }
+.ahrefLoginHeader, .ahrefGreetingHeader { position:absolute; bottom:0; right:2em; }
 .ahrefLoginHeader a, .ahrefGreetingHeader a { margin-left:2em; }
-/*.header { margin:5px 0px; text-align:center }*/
-.menucontainer { text-align:center; font-size:1.2em; border-top:solid 1px black; border-bottom:solid 1px black; margin-bottom:5px; }
-.menucontainer a { margin: 10px 0px; padding: 0px 20px; border-right:solid 1px black; }
-.menucontainer a:last-child { border-right: none; }
+
+.menucontainer { float:left;  height:3.7em; vertical-align:middle; font-size:1.5em; position:relative; }
+.divMenuItem { margin:auto .5em; position:absolute; bottom:0px; }
+.divMenuItemLeft { left:0em; }
+.divMenuItemMiddle {left:5em; width:7em }
+.divMenuItemRight {left:12.2em; }
+.headermenulink { bottom:0px; }
+.divLoginDiv { margin-right:.3em; }
+/*.divMenuItem a { position:absolute; bottom:0px; }*/
 
 /* User Profile button */
 .tooltip {
@@ -26,5 +31,11 @@
     overflow:hidden;
 }
 
-#masterHeader { position:relative; }
-#imgLogo { position:absolute; left:0px; }
+.header { position:relative; width:100%; height:5.6em; overflow:auto; 
+          margin-bottom:3px;
+}
+#divLogo {float:left; margin:0px;}
+#imgLogo { height:5em; margin:.3em .3em; }
+#aLogo { float:left; margin:0px; }
+
+.bodycontent { margin-top:2em;}

@@ -21,27 +21,33 @@
 </head>
 <body onload="pageloaded()">
     <div class='header'>
-    <div class='row'>
-		<div class='col-md-12'>
-            <div id="masterHeader">
-			    <a href='index.aspx' id="imgLogo"><img src='images/Logo.png' /></a>
-			    <div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
-	                <a href='./login.aspx'>Login</a>
-	                <a href="register.aspx">Sign up</a>
-                </div>
-                <div  runat="server" id="divLoggedIn">
-                    <asp:Label runat="server" ID="txtUserName" />
-                    <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
-                </div>
-            </div>
-		</div>
+        <div id="divLogo">
+		    <a href='index.aspx' id="aLogo"><img id="imgLogo" src='images/Logo.png' /></a>
+        </div>
         <div class="menucontainer">
-	        <a id="ahrefRecipes" href="recipes.aspx">Recipes</a>
-	        <a id="ahrefMealPlanner" href="mealplanner.aspx">Meal Planner</a>
-	        <a id="ahrefCalendar" href="calendarpage.aspx">Calendar</a>
+            <div class="divMenuItem divMenuItemLeft">
+	            <a id="ahrefRecipes" class="headermenulink" href="recipes.aspx">Recipes</a>
+            </div>
+            <div class="divMenuItem divMenuItemMiddle">
+	            <a id="ahrefMealPlanner" class="headermenulink" href="mealplanner.aspx">Meal Planner</a>
+            </div>
+            <div class="divMenuItem divMenuItemRight">
+	            <a id="ahrefCalendar"class="headermenulink"  href="calendarpage.aspx">Calendar</a>
+            </div>
+        </div>
+        <div class="divLoginDiv">
+		    <div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
+	            <a href='./login.aspx'>Login</a>
+	            <a href="register.aspx">Sign up</a>
+            </div>
+            <div  runat="server" id="divLoggedIn" class='ahrefLoginHeader'>
+                <asp:Label runat="server" ID="txtUserName" />
+                <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
+            </div>
         </div>
 	</div>
+    <div class='bodycontent'>
+        <asp:ContentPlaceHolder ID="cpBody" runat="server" />
     </div>
-    <asp:ContentPlaceHolder ID="cpBody" runat="server" />
 </body>
 </html>
