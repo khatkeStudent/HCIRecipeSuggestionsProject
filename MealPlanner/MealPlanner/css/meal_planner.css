@@ -1,7 +1,32 @@
-.plannersection {
-	margin:3px 0px;
+.deletegrocery { position:absolute; right:5px; top:4px}
+.imgRecipeListItem { width:6em; height:6em; }
+.listItemCell { padding-bottom:.5em; }
+.rowItemContainer { margin-top:5em; }
+.plannersection { margin:3px 0px; }
+.divTrash { margin-left:2.1em; margin-top:auto; margin-bottom:0px}
+
+table { width:100%; }
+#calendarheader { overflow:auto; position:relative; }
+#imgTrash { height:3em; position:absolute; right:1em; bottom:.5em; }
+#selectable { }
+#ahrefMealPlanner { background-color:lightblue; }
+#selectable .ui-selecting {  }
+#selectable .ui-selected {  }
+#selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+#selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; position:relative; }
+
+
+.main { 
+    margin: 0px;
+    overflow:auto;
+    border:none;
+}
+.sidebar    {
+    width: 6.1em;
+    float: left;
 }
 
-#ahrefMealPlanner {
-	background-color:lightblue;
+.page-wrap  {
+    background: #ffffff;
+    margin-left: 7em;
 }

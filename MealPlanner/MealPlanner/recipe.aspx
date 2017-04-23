@@ -34,9 +34,9 @@
                     <form runat="server">
                     <asp:Label runat="server" ID="lblAlert" CssClass="alert alert-success" />
                     <p runat="server" id="divDatePicker">Date: <input runat="server" type="text" id="datepicker" /></p>
-                    <asp:Button runat="server" ID="btnAddToPlan" CssClass="btn btn-success" Text="+ Add" OnClick="btnAddToPlan_Click" />
-                    <%--<asp:Button runat="server" ID="btnShare" class="btn btn-info" OnClick="btnShare_Click" />--%>
-				    <asp:Button runat="server" ID="btnAddGroceries" class="btn btn-warning" OnClick="btnAddGroceries_Click" Text="Add Groceries" />
+                    <asp:Button runat="server" ID="btnAddToPlan" CssClass="btn btn-primary" Text="+ Add" OnClick="btnAddToPlan_Click" />
+                    <asp:Button runat="server" ID="btnAddToFavorites" class="btn btn-primary" OnClick="btnAddToFavorites_Click" Text="Add To Favorites" />
+				    <asp:Button runat="server" ID="btnAddGroceries" class="btn btn-primary" OnClick="btnAddGroceries_Click" Text="Add Groceries" />
                     </form>
 			    </div>
 		    </div>

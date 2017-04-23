@@ -20,17 +20,19 @@
     <asp:ContentPlaceHolder ID="cpHead" runat="server" />
 </head>
 <body onload="pageloaded()">
-    <div class='header container'>
+    <div class='header'>
     <div class='row'>
 		<div class='col-md-12'>
-			<a href='index.aspx'><img src='images/Logo.png' /></a>
-			<div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
-	            <a href='./login.aspx'>Login</a>
-	            <a href="register.aspx">Sign up</a>
-            </div>
-            <div  runat="server" id="divLoggedIn">
-                <asp:Label runat="server" ID="txtUserName" />
-                <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
+            <div id="masterHeader">
+			    <a href='index.aspx' id="imgLogo"><img src='images/Logo.png' /></a>
+			    <div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
+	                <a href='./login.aspx'>Login</a>
+	                <a href="register.aspx">Sign up</a>
+                </div>
+                <div  runat="server" id="divLoggedIn">
+                    <asp:Label runat="server" ID="txtUserName" />
+                    <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
+                </div>
             </div>
 		</div>
         <div class="menucontainer">

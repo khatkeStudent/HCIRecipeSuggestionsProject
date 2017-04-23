@@ -12,6 +12,7 @@ namespace MealPlanner
     {
         private Recipe mRecipe;
         private User mUser;
+        private bool mIsFavorite = false;
 
         protected void Page_Load(object sender, EventArgs e) {
             if (!IsPostBack) {
@@ -50,10 +51,16 @@ namespace MealPlanner
                 divDatePicker.Visible = false;
             } else {
                 mUser = (User)Session["user"];
+                mIsFavorite = Recipe.CheckFavorite(mUser.ID, mRecipe.ID);
             }
 
             txtTitle.Text = mRecipe.Name;
             imgRecipe.Src = mRecipe.Image;
+
+            if (mIsFavorite) {
+                setFavorite();
+            }
+
             datepicker.Value = DateTime.Now.ToString("MM/dd/yyyy");
             divIngredients.InnerHtml = formatIngredients();
             divInstructions.InnerHtml = formatInstructions();
@@ -124,6 +131,16 @@ namespace MealPlanner
             divInstructionContainer.Visible = false;
             divRecipe.Visible = false;
         }
+
+        private void setFavorite() {
+            if (mIsFavorite) {
+                btnAddToFavorites.CssClass = "btn btn-success";
+                btnAddToFavorites.Text = "✔ Favorite";
+            } else {
+                btnAddToFavorites.CssClass = "btn btn-primary";
+                btnAddToFavorites.Text = "Add To Favorites";
+            }
+        }
         #endregion
 
         protected void btnAddToPlan_Click(object sender, EventArgs e) {
@@ -149,8 +166,16 @@ namespace MealPlanner
             lblAlert.Text = $"Recipe added successfully for {date.ToString("MM/dd/yyyy")}";
         }
 
-        protected void btnShare_Click(object sender, EventArgs e) {
-
+        protected void btnAddToFavorites_Click(object sender, EventArgs e) {
+            if (mIsFavorite) {
+                mIsFavorite = !mIsFavorite;
+                mRecipe.DeleteFavorite(mUser.ID);
+                setFavorite();
+            } else {
+                mIsFavorite = !mIsFavorite;
+                mRecipe.SaveFavorite(mUser.ID);
+                setFavorite();
+            }
         }
 
         protected void btnAddGroceries_Click(object sender, EventArgs e) {

@@ -118,6 +118,7 @@
     <Content Include="images\sandwich.png" />
     <Content Include="images\seitan.jpg" />
     <Content Include="images\test.png" />
+    <Content Include="images\trash.png" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />

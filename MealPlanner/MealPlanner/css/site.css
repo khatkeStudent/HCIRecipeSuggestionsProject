@@ -1,50 +1,19 @@
-:root {
-  --main-bg-color:dodgerblue;
-  --main-accent-color:lightblue;
-}
+:root { --main-bg-color:dodgerblue; --main-accent-color:lightblue; }
 
-.bodyrow {
-	margin:3px 10px;
-}
+.bodyrow { margin:3px 10px; }
 
-.ahrefLoginHeader, .ahrefGreetingHeader {
-	position:absolute;
-	bottom:0;
-	right:0;
-}
-
-.ahrefLoginHeader a, .ahrefGreetingHeader a {
-	margin-left:2em;
-}
-
-.header {
-	margin:5px 0px;
-	text-align:center
-}
-
-.menucontainer {
-	text-align:center;
-	font-size:1.2em;
-	border-top:solid 1px black;
-	border-bottom:solid 1px black;
-	margin-bottom:5px;
-}
-
-.menucontainer a {
-	margin: 10px 0px;
-	padding: 0px 20px;
-	border-right:solid 1px black;
-}
-
-.menucontainer a:last-child{
-   border-right: none;
-}
+.ahrefLoginHeader, .ahrefGreetingHeader { position:absolute; bottom:0; right:0; }
+.ahrefLoginHeader a, .ahrefGreetingHeader a { margin-left:2em; }
+/*.header { margin:5px 0px; text-align:center }*/
+.menucontainer { text-align:center; font-size:1.2em; border-top:solid 1px black; border-bottom:solid 1px black; margin-bottom:5px; }
+.menucontainer a { margin: 10px 0px; padding: 0px 20px; border-right:solid 1px black; }
+.menucontainer a:last-child { border-right: none; }
 
 /* User Profile button */
 .tooltip {
-	background-color:orange;
-    text-decoration:none;
-    position:relative;
+    background-color: orange;
+    text-decoration: none;
+    position: relative;
 }
 
 .tooltip span {
@@ -56,3 +25,6 @@
     position:fixed;
     overflow:hidden;
 }
+
+#masterHeader { position:relative; }
+#imgLogo { position:absolute; left:0px; }

@@ -17,37 +17,30 @@
 	    $(document).ready(function() {
 	        $('#cpBody_calendar').fullCalendar({
 			    header: {
-				    left: 'prev,next today',
+			        left: 'prev,today,next',
 				    center: 'title',
-				    right: 'month,agendaWeek,agendaDay,listWeek'
+				    right: 'month,basicWeek'
 			    },
 			    defaultDate: '2017-04-12',
 			    navLinks: true, // can click day/week names to navigate views
 			    editable: true,
 			    eventLimit: true, // allow "more" link when too many events
 			    eventClick: function(calEvent, jsEvent, view) {
-
-			        alert('Event: ' + calEvent.recipeid);
 			        window.location.href = "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlanner/Recipe.aspx?id=" + calEvent.recipeid;
 			    },
 			    eventDrop: function(event, delta, revertFunc) {
 			        var datastring = "\"" + event.id + "|" + event.start.format() + "\"";
-
-			        alert(event.id + " was dropped on " + event.start.format());
 
 			        if (!confirm("Are you sure about this change? ".concat(datastring))) {
 			            revertFunc();
 			        } else {
 			            $.ajax({
 			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
-			                type: 'PUT',
+			                type: 'POST',
 			                contentType: 'text/json',
 			                data: datastring,
-			                success: function (result) {
-			                    alert(event.id + " was updated.");
-			                },
 			                error: function (result) {
-			                    alert(event.id + " errored");
+			                    alert("Error saving changes to " + event.title);
 			                }
 			            });
 			        }

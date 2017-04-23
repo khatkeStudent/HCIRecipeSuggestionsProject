@@ -13,39 +13,75 @@ namespace MealPlanner {
     public partial class mealplanner {
         
         /// <summary>
-        /// divWeekView control.
+        /// hiddenUserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divWeekView;
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden hiddenUserID;
         
         /// <summary>
-        /// divFavoriteRecipes control.
+        /// calendar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFavoriteRecipes;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl calendar;
         
         /// <summary>
-        /// divFriendsActivities control.
+        /// listFavorites control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFriendsActivities;
+        protected global::System.Web.UI.WebControls.ListView listFavorites;
         
         /// <summary>
-        /// divSuggestions control.
+        /// FavoriteDatasource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divSuggestions;
+        protected global::System.Web.UI.WebControls.SqlDataSource FavoriteDatasource;
+        
+        /// <summary>
+        /// lblSuggestion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lblSuggestion;
+        
+        /// <summary>
+        /// listSuggestions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView listSuggestions;
+        
+        /// <summary>
+        /// SuggestionsDatasource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SuggestionsDatasource;
+        
+        /// <summary>
+        /// spanGroceryList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl spanGroceryList;
     }
 }

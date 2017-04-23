@@ -152,5 +152,107 @@ namespace MealPlanner.Models
                 return null;
             }
         }
+
+        #region Favorite Recipe Methods
+        public void SaveFavorite(int userid) {
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+
+                        // Check if recipe exists
+                        if (CheckFavorite(userid, ID)) {
+                            return;
+                        }
+
+                        DBConnection.OpenConnection(conn);
+                        cmd.CommandText = "INSERT INTO [dbo].[FavoriteRecipes] (UserID, RecipeID)" +
+                                $" Values ({userid}, {ID})";
+
+
+                        cmd.ExecuteNonQuery();
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
+        public static List<Recipe> GetFavorites(int userid) {
+            List<Recipe> recipes = new List<Recipe>();
+
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+
+                        // Check if recipe exists
+                        DBConnection.OpenConnection(conn);
+                        cmd.CommandText = $"SELECT r.ID as ID, r.Name as Name, r.Description as Description, r.Category as Category, r.Image as Image " +
+                            "FROM Recipes r left outer join FavoriteRecipes fr ON r.ID = fr.RecipeID " +
+                            $"WHERE fr.UserID = {userid}";
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                recipes.Add(Recipe.Parse(reader));
+                            }
+                        }
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+
+            return recipes;
+        }
+
+        public void DeleteFavorite(int userid) {
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+
+                        // Check if recipe exists
+                        DBConnection.OpenConnection(conn);
+                        cmd.CommandText = $"DELETE FROM FavoriteRecipes WHERE UserID = {userid} and RecipeID = {ID}";
+                        cmd.ExecuteNonQuery();
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+        }
+
+        public static bool CheckFavorite(int userid, int recipeid) {
+            using (SqlConnection conn = new SqlConnection(DBConnection.GetConnection())) {
+                try {
+                    using (SqlCommand cmd = new SqlCommand()) {
+                        cmd.Connection = conn;
+
+                        // Check if recipe exists
+                        DBConnection.OpenConnection(conn);
+                        cmd.CommandText = $"SELECT * FROM FavoriteRecipes WHERE UserID = {userid} AND RecipeID = {recipeid}";
+
+                        using (SqlDataReader reader = cmd.ExecuteReader()) {
+                            while (reader.Read()) {
+                                return true;
+                            }
+                        }
+                    }
+                } catch (Exception ex) {
+                    String e = ex.Message;
+                } finally {
+                    DBConnection.CloseConnection(conn);
+                }
+            }
+            return false;
+        }
+        #endregion
     }
 }
