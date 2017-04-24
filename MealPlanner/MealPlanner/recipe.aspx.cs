@@ -48,6 +48,7 @@ namespace MealPlanner
             if (Session["user"] == null) {
                 btnAddGroceries.Visible = false;
                 btnAddToPlan.Visible = false;
+                btnAddToFavorites.Visible = false;
                 divDatePicker.Visible = false;
             } else {
                 mUser = (User)Session["user"];
@@ -64,6 +65,7 @@ namespace MealPlanner
             datepicker.Value = DateTime.Now.ToString("MM/dd/yyyy");
             divIngredients.InnerHtml = formatIngredients();
             divInstructions.InnerHtml = formatInstructions();
+            txtRecipeName.InnerText = mRecipe.Name;
         }
 
         #region Helper Methods

@@ -18,7 +18,8 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
-    <div class="bodyrow">
+    <div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
         <div runat="server" id="divError">
             <asp:Label ID="lblError" runat="server" CssClass="alert alert-danger" />
         </div>
@@ -41,9 +42,14 @@
 			    </div>
 		    </div>
 	    </div>
+     </div>
     </div>
+    <div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
 	<div runat="server" id="divInstructionContainer" class="bodyrow">
         <h2>Instructions</h2>
 		<div runat="server" id="divInstructions" class="recipe-Instructions" />
 	</div>
+     </div>
+    </div>
 </asp:Content>

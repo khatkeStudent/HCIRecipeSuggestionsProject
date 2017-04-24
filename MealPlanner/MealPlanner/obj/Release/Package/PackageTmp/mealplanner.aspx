@@ -158,8 +158,8 @@
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
     <form runat="server">
     <input type="hidden" runat="server" id="hiddenUserID" />
-    <div class="row bodyrow">
-		<div class="col-sm-12 col-md-5 col-md-offset-1">
+    <div class="row bodyrow toprow">
+		<div class="col-sm-12 col-md-5 col-md-offset-1 toprow right_border color1">
             <div id="calendarheader">
                 <div id="divMealPlanTitle">
                     <h2>Meal Plan</h2>
@@ -170,7 +170,7 @@
             </div>
 			<div runat="server" id="calendar" />
 		</div>
-		<div class="col-sm-12 col-md-5">
+		<div class="col-sm-12 col-md-5 toprow color2">
             <h2>Favorite Recipes</h2>
 			<asp:ListView runat="server" ID="listFavorites" DataSourceID="FavoriteDatasource">
                 <LayoutTemplate>
@@ -219,7 +219,7 @@
 		</div>
 	</div>
 	<div class="row bodyrow">
-		<div class="col-sm-12 col-md-5 col-md-offset-1">
+		<div class="col-sm-12 col-md-5 col-md-offset-1 right_border color3">
 			<h2>Suggested Recipes</h2>
             <asp:Literal runat="server" ID="lblSuggestion" />
             <asp:ListView runat="server" ID="listSuggestions" DataSourceID="SuggestionsDatasource">
@@ -267,7 +267,7 @@
                 </SelectParameters>
             </asp:SqlDataSource>
 		</div>
-		<div class="col-sm-12 col-md-5">
+		<div class="col-sm-12 col-md-5 color4" id="divGroceryList">
 			<h2>Grocery List</h2>
             <span runat="server" id="spanGroceryList" />
         </div>

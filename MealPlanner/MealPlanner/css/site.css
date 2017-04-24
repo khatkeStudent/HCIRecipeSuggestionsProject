@@ -1,7 +1,5 @@
 :root { --main-bg-color:#113388; --main-accent-color:#F7b538; }
 
-.bodyrow { margin:3px 10px; border-bottom: 0.5px solid;}
-
 .ahrefLoginHeader, .ahrefGreetingHeader { position:absolute; bottom:0; right:2em; }
 .ahrefLoginHeader a, .ahrefGreetingHeader a { margin-left:2em; }
 
@@ -37,10 +35,10 @@
 #divLogo {float:left; margin:0px;}
 #imgLogo { height:5em; margin:.3em .3em; }
 #aLogo { float:left; margin:0px; }
-/*#txtUserName{color: #3cdbd3;}*/
+.bold { font-weight:bold; }
 
 .bodycontent { margin-top:2em;}
-.header a {
+.header a, .header span {
     color: white !important;
 }
 body{

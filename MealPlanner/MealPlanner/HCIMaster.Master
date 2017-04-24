@@ -37,12 +37,12 @@
         </div>
         <div class="divLoginDiv">
 		    <div runat="server" id="divNotLoggedIn" class='ahrefLoginHeader'>
-	            <a href='./login.aspx'>Login</a>
-	            <a href="register.aspx">Sign up</a>
+	            <a class="bold" href='./login.aspx'>Login</a>
+	            <a class="bold" href="register.aspx">Sign up</a>
             </div>
             <div  runat="server" id="divLoggedIn" class='ahrefLoginHeader'>
-                <asp:Label runat="server" ID="txtUserName" />
-                <asp:HyperLink runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
+                <asp:Label class="bold" runat="server" ID="txtUserName" />
+                <asp:HyperLink class="bold" runat="server" NavigateUrl="logout.aspx">Logout</asp:HyperLink>
             </div>
         </div>
 	</div>

@@ -11,23 +11,21 @@
     <asp:Label runat="server" ID="txtMessages" />
     <div class="container">
 		<div class="row">
-			<div class="maincolumn col-md-4">
+			<div class="maincolumn col-md-4 leftcolumn">
 				<h1>Popular Recipes</h1>
                 <div runat="server" id="divPopularRecipes" />
 			</div>
-			<div class="maincolumn col-md-4">
-			<h1>Tweets</h1>
-			<a class="twitter-timeline" href="https://twitter.com/hcimealplanner">By @hcimealplanner</a>
+			<div class="maincolumn col-md-4 middlecolumn">
+			    <h1>Tweets</h1>
+			    <a class="twitter-timeline" href="https://twitter.com/hcimealplanner">By @hcimealplanner</a>
 			</div>
 			<div class="maincolumn rightcolumn col-md-4">
-				<div class="row">
-					<h1>About Us</h1>
-					<p class="divAboutUs">
+				<h1>About Us</h1>
+				<p class="divAboutUs">
 					We are Team Hufflepuff, and we hope to make this awesome website that many people can use to plan meals and make grocery lists.
-					</p>
-				</div>
+				</p>
+                <h1>Reviews</h1>
 				<div class="subcolumn row">
-					<h1>Reviews</h1>
 					<p class="pUserReview">
 					This website is great! I can quickly make a weekly meal plan and get on with my life.<br />&emsp;~John
 					</p>

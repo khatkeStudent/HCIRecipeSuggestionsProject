@@ -12,7 +12,10 @@
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
-    <asp:Label ID="txtError" runat="server" CssClass="alert alert-danger text-center"></asp:Label>
+    <div class="divError">
+        <asp:Label ID="txtError" Visible="false" runat="server" 
+            CssClass="alert alert-danger"></asp:Label>
+    </div>
     <form runat="server" method="get" action="login.aspx">
 	    <fieldset>
 		    <legend>Login</legend>

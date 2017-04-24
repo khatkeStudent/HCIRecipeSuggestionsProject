@@ -4,9 +4,11 @@
 .rowItemContainer { margin-top:5em; }
 .plannersection { margin:3px 0px; }
 .divTrash { margin-left:2.1em; margin-top:auto; margin-bottom:0px}
+.toprow { height: 30em; }
 
 table { width:100%; }
 #calendarheader { overflow:auto; position:relative; }
+#divGroceryList { overflow:scroll; }
 #imgTrash { height:2em; position:absolute; right:1em; bottom:.5em; }
 #selectable { }
 #ahrefMealPlanner { background-color:#ff8360; }
@@ -40,7 +42,6 @@ table { width:100%; }
 
 .color2{
     background-color: #ff8360;
-    height: 328px;
 }
 
 .color3{

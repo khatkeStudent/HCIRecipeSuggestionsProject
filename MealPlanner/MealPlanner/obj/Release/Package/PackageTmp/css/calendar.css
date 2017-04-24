@@ -1,8 +1,13 @@
 #ahrefCalendar {
-	background:lightblue;
+	background: #ff8360;
 }
 
 #calendar {
 	max-width: 900px;
 	margin: 0 auto;
+    color: black;
+}
+
+.fc-view-container{
+    background-color: #f4f1bb;
 }

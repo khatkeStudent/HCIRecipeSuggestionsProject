@@ -1,6 +1,4 @@
-:root { --main-bg-color:dodgerblue; --main-accent-color:lightblue; }
-
-.bodyrow { margin:3px 10px; }
+:root { --main-bg-color:#113388; --main-accent-color:#F7b538; }
 
 .ahrefLoginHeader, .ahrefGreetingHeader { position:absolute; bottom:0; right:2em; }
 .ahrefLoginHeader a, .ahrefGreetingHeader a { margin-left:2em; }
@@ -8,7 +6,7 @@
 .menucontainer { float:left;  height:3.7em; vertical-align:middle; font-size:1.5em; position:relative; }
 .divMenuItem { margin:auto .5em; position:absolute; bottom:0px; }
 .divMenuItemLeft { left:0em; }
-.divMenuItemMiddle {left:5em; width:7em }
+.divMenuItemMiddle {left:5em; width:6em; }
 .divMenuItemRight {left:12.2em; }
 .headermenulink { bottom:0px; }
 .divLoginDiv { margin-right:.3em; }
@@ -32,10 +30,17 @@
 }
 
 .header { position:relative; width:100%; height:5.6em; overflow:auto; 
-          margin-bottom:3px;
+          margin-bottom:3px; background-color: #9BC1BC;
 }
 #divLogo {float:left; margin:0px;}
 #imgLogo { height:5em; margin:.3em .3em; }
 #aLogo { float:left; margin:0px; }
+.bold { font-weight:bold; }
 
 .bodycontent { margin-top:2em;}
+.header a, .header span {
+    color: white !important;
+}
+body{
+    background-color:white !important;
+}

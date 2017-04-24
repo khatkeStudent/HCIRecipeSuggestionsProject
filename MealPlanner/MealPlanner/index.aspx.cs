@@ -20,6 +20,10 @@ namespace MealPlanner
             } else {
                 txtMessages.Visible = false;
             }
+
+            if (Session["user"] != null) {
+                btnSignup.Visible = false;
+            }
         }
 
         protected void btnSignup_Click(object sender, EventArgs e) {
