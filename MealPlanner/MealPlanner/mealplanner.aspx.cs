@@ -19,11 +19,11 @@ namespace MealPlanner
             if (Session["user"] == null) {
                 Session["prevurl"] = "mealplanner.aspx";
                 Response.Redirect("login.aspx");
+            } else {
+                mUser = (Models.User)Session["user"];
             }
 
             if (!IsPostBack) {
-                mUser = (Models.User)Session["user"];
-
                 if (Session["userid"] != null) {
                     Session.Remove("userid");
                 }

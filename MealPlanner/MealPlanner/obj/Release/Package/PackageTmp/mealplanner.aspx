@@ -46,7 +46,7 @@
 			                event.id = JSON.stringify(data).replace("{", "").replace("}", "").replace("\"", "").replace("\"", "");
 			            },
 			            error: function (result) {
-			                alert("Error saving the meal: " + result);
+			                alert("Error saving the meal: " + event.title);
 			            }
 			        });
 			        //}
