@@ -33,20 +33,20 @@
 	margin: 0px;
 	padding: 5px 0px;
 	text-align:center;
-	border-bottom:solid 1px black;
+	/*border-bottom:solid 1px black;*/
 	background-color: var(--main-bg-color);
 	font-family:'Open Sans', sans-serif;
 }
 
-.divFavoriteRecipes div {
+/*.divFavoriteRecipes div {
 	border-bottom:solid 1px black;
 	padding:2px 0px 2px 5px;
-}
+}*/
 
-/* Friends Activities */
+/* Friends Activities *//*
 .divFriendsActivities {
 	border:solid 1px black;
-}
+}*/
 
 .divFriendActivityPost {
 	margin-left:2em;
@@ -62,10 +62,10 @@
 	font-size:.8em;
 }
 
-/* Suggested Recipes */
+/* Suggested Recipes *//*
 .divSuggestions {
 	border:solid 1px black;
-}
+}*/
 
 /* Recipe Summaries */
 

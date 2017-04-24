@@ -25,14 +25,14 @@
 		    <a href='index.aspx' id="aLogo"><img id="imgLogo" src='images/Logo.png' /></a>
         </div>
         <div class="menucontainer">
-            <div class="divMenuItem divMenuItemLeft">
-	            <a id="ahrefRecipes" class="headermenulink" href="recipes.aspx">Recipes</a>
+            <div id="ahrefRecipes" class="divMenuItem divMenuItemLeft">
+	            <a class="headermenulink" href="recipes.aspx">Recipes</a>
             </div>
-            <div class="divMenuItem divMenuItemMiddle">
-	            <a id="ahrefMealPlanner" class="headermenulink" href="mealplanner.aspx">Meal Planner</a>
+            <div id="ahrefMealPlanner" class="divMenuItem divMenuItemMiddle">
+	            <a class="headermenulink" href="mealplanner.aspx">Meal Planner</a>
             </div>
-            <div class="divMenuItem divMenuItemRight">
-	            <a id="ahrefCalendar"class="headermenulink"  href="calendarpage.aspx">Calendar</a>
+            <div id="ahrefCalendar" class="divMenuItem divMenuItemRight">
+	            <a class="headermenulink"  href="calendarpage.aspx">Calendar</a>
             </div>
         </div>
         <div class="divLoginDiv">

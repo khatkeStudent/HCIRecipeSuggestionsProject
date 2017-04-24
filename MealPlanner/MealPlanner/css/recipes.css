@@ -1,5 +1,5 @@
 #ahrefRecipes {
-	background-color:lightblue;
+	background-color: #ff8360;
 }
 
 .imgRecipeListItem {
@@ -9,6 +9,21 @@
 
 .listItemCell {
     padding-bottom:.5em;
+    max-width: 700px;
+}
+
+table{
+    padding: 10px 10px;
+}
+table img{
+    margin-left: 10px;
+    margin-top:10px;
+}
+tr {
+    background-color: #7dce82;
+}
+tr:nth-child(even) {
+    background-color: #9BC1BC;
 }
 
 .rowItemContainer {

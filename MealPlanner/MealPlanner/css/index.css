@@ -1,23 +1,39 @@
 h1 {
-	border-bottom-style:solid;
-	border-color:#666699;
+	border-bottom:solid 0.5px;
+	/*border-color:#666699;*/
 	width:100%;
 }
 
 p {
 	text-align:left;
 	padding:4px;
+    color: black;
+}
+.pUserReview{
+    margin-left: 10px;
 }
 
 .maincolumn {
 	text-align:center;
-	border-left-style:solid;
-	border-top-style:solid;
-	border-color:#666699;
-	height:inherit;	
+	border-right:solid 0.5px;
 }
 
-.subcolumn {
+.leftcolumn{
+    background-color: #7dce82;
+    height: 915px;
+}
+
+.middlecolumn{
+    background-color: #9BC1BC;
+}
+
+.rightcolumn{
+    border-right: none;
+    background-color: #7dce82;
+    height: 915px;
+}
+
+/*.subcolumn {
 	border-top-style:solid;
 	border-color:#666699;
 }
@@ -25,11 +41,11 @@ p {
 .rightcolumn {
 	border-right-style:solid;
 	border-color:#666699;
-}
+}*/
 
 .divPopRecipe {
-	margin:2px 0px;
-	width:100%;
+	margin:2px 12px;
+	width:90%;
 }
 
 .imgRecipe {
@@ -44,4 +60,3 @@ p {
 	margin-top:5px;
 	font-size:2em;
 }
-

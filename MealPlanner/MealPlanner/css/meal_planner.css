@@ -7,14 +7,17 @@
 
 table { width:100%; }
 #calendarheader { overflow:auto; position:relative; }
-#imgTrash { height:3em; position:absolute; right:1em; bottom:.5em; }
+#imgTrash { height:2em; position:absolute; right:1em; bottom:.5em; }
 #selectable { }
-#ahrefMealPlanner { background-color:lightblue; }
+#ahrefMealPlanner { background-color:#ff8360; }
 #selectable .ui-selecting {  }
 #selectable .ui-selected {  }
 #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
 #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; position:relative; }
 
+.right_border{
+    border-right: 0.5px solid;
+}
 
 .main { 
     margin: 0px;
@@ -29,4 +32,22 @@ table { width:100%; }
 .page-wrap  {
     background: #ffffff;
     margin-left: 7em;
+}
+
+.color1{
+    background-color: #f4f1bb;
+}
+
+.color2{
+    background-color: #ff8360;
+    height: 328px;
+}
+
+.color3{
+    background-color: #7DCE82;
+}
+
+.color4{
+    background-color: #9BC1BC;
+    height: 418px;
 }
