@@ -18,12 +18,13 @@ namespace MealPlanner
                 txtMessages.Visible = true;
                 Session.Remove("message");
             } else {
-                txtMessages.Visible = false;
+                divMessage.Visible = false;
             }
 
             if (Session["user"] != null) {
                 btnSignup.Visible = false;
             }
+
         }
 
         protected void btnSignup_Click(object sender, EventArgs e) {

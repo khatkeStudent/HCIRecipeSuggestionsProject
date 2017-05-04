@@ -52,3 +52,8 @@ table { width:100%; }
     background-color: #9BC1BC;
     height: 418px;
 }
+
+.center-text {
+    text-align:center;
+    font-size:small;
+}

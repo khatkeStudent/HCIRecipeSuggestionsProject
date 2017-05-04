@@ -13,6 +13,15 @@ namespace MealPlanner {
     public partial class index {
         
         /// <summary>
+        /// divMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divMessage;
+        
+        /// <summary>
         /// txtMessages control.
         /// </summary>
         /// <remarks>

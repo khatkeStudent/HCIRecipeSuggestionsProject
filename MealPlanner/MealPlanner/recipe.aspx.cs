@@ -19,6 +19,7 @@ namespace MealPlanner
                 if (!loadRecipeFromUrl()) {
                     return;
                 }
+                datepicker.Value = DateTime.Now.ToString("MM/dd/yyyy");
             } else {
                 if (Session["recipe"] == null) {
                     if (!loadRecipeFromUrl()) {
@@ -62,7 +63,6 @@ namespace MealPlanner
                 setFavorite();
             }
 
-            datepicker.Value = DateTime.Now.ToString("MM/dd/yyyy");
             divIngredients.InnerHtml = formatIngredients();
             divInstructions.InnerHtml = formatInstructions();
             txtRecipeName.InnerText = mRecipe.Name;
@@ -136,7 +136,7 @@ namespace MealPlanner
 
         private void setFavorite() {
             if (mIsFavorite) {
-                btnAddToFavorites.CssClass = "btn btn-success";
+                btnAddToFavorites.CssClass = "btn btn-success btn-action";
                 btnAddToFavorites.Text = "✔ Favorite";
             } else {
                 btnAddToFavorites.CssClass = "btn btn-primary";

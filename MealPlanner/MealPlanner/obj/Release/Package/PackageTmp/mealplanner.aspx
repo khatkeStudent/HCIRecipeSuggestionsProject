@@ -58,22 +58,18 @@
 			    },
 			    eventDrop: function(event, delta, revertFunc) {
 			        var datastring = "\"" + event.id + "|" + event.start.format() + "\"";
-			        if (!confirm("Move " + event.title + "?")) {
-			            revertFunc();
-			        } else {
-			            $.ajax({
-			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerAPI/api/MealPlan",
-			                type: 'POST',
-			                contentType: 'text/json',
-			                data: datastring,
-			                success: function (result) {
-			                    //alert("Saved changes to " + event.title);
-			                },
-			                error: function (result) {
-			                    alert("Error saving changes to " + event.title);
-			                }
-			            });
-			        }
+			        $.ajax({
+			            url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerAPI/api/MealPlan",
+			            type: 'POST',
+			            contentType: 'text/json',
+			            data: datastring,
+			            success: function (result) {
+			                //alert("Saved changes to " + event.title);
+			            },
+			            error: function (result) {
+			                alert("Error saving changes to " + event.title);
+			            }
+			        });
 			    },
 			    eventDragStop: function (event, jsEvent) {
 			        var trashE1 = $("#divTrash");
@@ -87,19 +83,17 @@
 			        if (jsEvent.pageX >= x1 && jsEvent.pageX <= x2 &&
                         jsEvent.pageY >= y1 && jsEvent.pageY <= y2) {
 			            
-			            if (confirm("Remove Meal? ")) {
-			                $.ajax({
-			                    url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/" + event.id,
-			                    type: 'DELETE',
-			                    success: function (result) {
-			                        //alert("deleted: " + event.id);
-			                        $('#cpBody_calendar').fullCalendar('removeEvents', event._id);
-			                    },
-			                    error: function (result) {
-			                        alert("Error saving changes to " + event.title);
-			                    }
-			                });
-			            }
+			            $.ajax({
+			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/" + event.id,
+			                type: 'DELETE',
+			                success: function (result) {
+			                    //alert("deleted: " + event.id);
+			                    $('#cpBody_calendar').fullCalendar('removeEvents', event._id);
+			                },
+			                error: function (result) {
+			                    alert("Error saving changes to " + event.title);
+			                }
+			            });
 			        }
 			    },
 	            eventSources: ["http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/".concat(document.getElementById('cpBody_hiddenUserID').value)]
@@ -169,6 +163,9 @@
                 </div>
             </div>
 			<div runat="server" id="calendar" />
+            <div class="center-text">
+                <i>*Drag a recipe to the calendar to add it to your meal plan.</i>
+            </div>
 		</div>
 		<div class="col-sm-12 col-md-5 toprow color2">
             <h2>Favorite Recipes</h2>

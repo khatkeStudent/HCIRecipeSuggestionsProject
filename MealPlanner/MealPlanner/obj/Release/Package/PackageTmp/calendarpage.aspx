@@ -31,19 +31,15 @@
 			    eventDrop: function(event, delta, revertFunc) {
 			        var datastring = "\"" + event.id + "|" + event.start.format() + "\"";
 
-			        if (!confirm("Are you sure about this change? ".concat(datastring))) {
-			            revertFunc();
-			        } else {
-			            $.ajax({
-			                url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
-			                type: 'POST',
-			                contentType: 'text/json',
-			                data: datastring,
-			                error: function (result) {
-			                    alert("Error saving changes to " + event.title);
-			                }
-			            });
-			        }
+			        $.ajax({
+			            url: "http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan",
+			            type: 'POST',
+			            contentType: 'text/json',
+			            data: datastring,
+			            error: function (result) {
+			                alert("Error saving changes to " + event.title);
+			            }
+			        });
 			    },
 	            eventSources: ["http://hcimealplanner.us-west-2.elasticbeanstalk.com/MealPlannerApi/api/MealPlan/".concat(document.getElementById('cpBody_hiddenUserID').value)]
                 //events: [{id:1, title:"test", start:"04/10/2017"}]

@@ -163,6 +163,9 @@
                 </div>
             </div>
 			<div runat="server" id="calendar" />
+            <div class="center-text">
+                <i>*Drag a recipe to the calendar to add it to your meal plan.</i>
+            </div>
 		</div>
 		<div class="col-sm-12 col-md-5 toprow color2">
             <h2>Favorite Recipes</h2>

@@ -33,6 +33,10 @@ p {
     height: 915px;
 }
 
+#txtMessages {
+    
+}
+
 /*.subcolumn {
 	border-top-style:solid;
 	border-color:#666699;
@@ -59,4 +63,9 @@ p {
 	width:96%;
 	margin-top:5px;
 	font-size:2em;
+}
+
+#cpBody_divMessage {
+    margin-bottom:20px;
+    text-align:center;
 }

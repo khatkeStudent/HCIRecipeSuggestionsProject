@@ -25,6 +25,16 @@ namespace MealPlanner
                 }
 
                 Session.Add("message", $"Welcome {mUser.FirstName} {mUser.LastName}");
+
+                String email = txtEmailAddress.Text;
+                String password = txtPassword.Text;
+
+                var user = Models.User.Get(email, password);
+
+                if (Session["user"] != null) {
+                    Session.Remove("user");
+                }
+                Session.Add("user", user);
                 Response.Redirect("index.aspx");
             } else {
                 txtError.InnerHtml = mError;

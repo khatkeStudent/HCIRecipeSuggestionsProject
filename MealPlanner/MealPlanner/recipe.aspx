@@ -12,7 +12,11 @@
         }
 
         $(function() {
-            $("#cpBody_datepicker").datepicker();
+            $("#cpBody_datepicker").datepicker({
+                onSelect: function (dateText, inst) {
+                    $(this).datepicker('setDate', $(this).val());
+                }
+            });
         } );
       </script>
 </asp:Content>
@@ -31,13 +35,13 @@
                     <h2>Ingredients</h2>
 			        <div runat="server" id="divIngredients" class="recipe-body" />
 			    </div>
-			    <div class="recipe-actions">
-                    <form runat="server">
+			    <div >
+                    <form class="recipe-actions" runat="server">
                     <asp:Label runat="server" ID="lblAlert" CssClass="alert alert-success" />
                     <p runat="server" id="divDatePicker">Date: <input runat="server" type="text" id="datepicker" /></p>
-                    <asp:Button runat="server" ID="btnAddToPlan" CssClass="btn btn-primary" Text="+ Add" OnClick="btnAddToPlan_Click" />
-                    <asp:Button runat="server" ID="btnAddToFavorites" class="btn btn-primary" OnClick="btnAddToFavorites_Click" Text="Add To Favorites" />
-				    <asp:Button runat="server" ID="btnAddGroceries" class="btn btn-primary" OnClick="btnAddGroceries_Click" Text="Add Groceries" />
+                    <asp:Button runat="server" ID="btnAddToPlan" CssClass="btn btn-primary btn-action" Text="Add To Plan" OnClick="btnAddToPlan_Click" />
+                    <asp:Button runat="server" ID="btnAddToFavorites" class="btn btn-primary btn-action" OnClick="btnAddToFavorites_Click" Text="Add To Favorites" />
+				    <asp:Button runat="server" ID="btnAddGroceries" class="btn btn-primary btn-action" OnClick="btnAddGroceries_Click" Text="Add Groceries" />
                     </form>
 			    </div>
 		    </div>

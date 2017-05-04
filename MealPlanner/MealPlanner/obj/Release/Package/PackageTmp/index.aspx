@@ -5,11 +5,20 @@
 <asp:Content runat="server" ContentPlaceHolderID="cpHead">
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        function onload() {
+
+        }
+    </script>
 </asp:Content>
 
 <asp:Content runat="server" ContentPlaceHolderID="cpBody">
-    <asp:Label runat="server" ID="txtMessages" />
     <div class="container">
+        <div class="row">
+			<div runat="server" id="divMessage" class="col-sm-12">
+                <asp:Label runat="server" ID="txtMessages" class="alert alert-info" />
+            </div>
+        </div>
 		<div class="row">
 			<div class="maincolumn col-md-4 leftcolumn">
 				<h1>Popular Recipes</h1>

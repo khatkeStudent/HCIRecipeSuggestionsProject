@@ -40,3 +40,13 @@
     margin: 0 auto;
     margin-top: 10px;
 }
+
+.btn-action {
+    width:50%;
+    margin-top:.2em;
+    
+}
+
+#cpBody_divDatePicker {
+    margin-top:20px;
+}
